@@ -12,6 +12,16 @@
 			"sid": 403944685505129
 		},
 		{
+			"eventType": "variable",
+			"name": "Power",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 512209375545223
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Player",
@@ -22,12 +32,36 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-click",
+							"id": "mouse-button-is-down",
 							"objectClass": "Mouse",
-							"sid": 304117623514625,
+							"sid": 692677370684294,
 							"parameters": {
-								"mouse-button": "left",
-								"click-type": "clicked"
+								"mouse-button": "left"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 789325204716908,
+							"parameters": {
+								"variable": "Power",
+								"value": "0.5"
+							}
+						}
+					],
+					"sid": 627405508413236
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-button-released",
+							"objectClass": "Mouse",
+							"sid": 602881480153098,
+							"parameters": {
+								"mouse-button": "left"
 							}
 						}
 					],
@@ -35,23 +69,56 @@
 						{
 							"id": "set-vector-y",
 							"objectClass": "Player",
-							"sid": 361131789613259,
+							"sid": 542761572397415,
 							"behaviorType": "Plataforma",
 							"parameters": {
-								"vector-y": "-750"
+								"vector-y": "-200 *( 1 + Power/10)"
 							}
 						},
 						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 655895366974904,
+							"id": "spawn-another-object",
+							"objectClass": "Player",
+							"sid": 804944976629026,
 							"parameters": {
-								"seconds": "1",
-								"use-timescale": true
+								"object": "Tiro",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 321915412987213,
+							"parameters": {
+								"variable": "Power",
+								"value": "0"
 							}
 						}
 					],
-					"sid": 627405508413236
+					"sid": 758478998581489
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "Tiro",
+							"sid": 950292548964627
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle",
+							"objectClass": "Tiro",
+							"sid": 684261651231278,
+							"parameters": {
+								"angle": "90"
+							}
+						}
+					],
+					"sid": 672057523234874
 				}
 			],
 			"sid": 529482182383508

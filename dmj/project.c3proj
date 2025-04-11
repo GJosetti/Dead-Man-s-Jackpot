@@ -29,6 +29,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Bullet",
+			"name": "Projétil",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Platform",
 			"name": "Plataforma",
 			"author": "Scirra",
@@ -45,7 +52,8 @@
 	"uniqueId": "781yszjylkn",
 	"objectTypes": {
 		"items": [
-			"Colisão"
+			"Colisão",
+			"Tiro"
 		],
 		"subfolders": [
 			{
