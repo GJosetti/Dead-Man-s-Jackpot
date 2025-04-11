@@ -233,6 +233,16 @@
 								"mouse-button": "right",
 								"click-type": "clicked"
 							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 548882167568683,
+							"parameters": {
+								"variable": "Power",
+								"comparison": 0,
+								"value": "0"
+							}
 						}
 					],
 					"actions": [
