@@ -1,11 +1,17 @@
 {
-	"name": "Player",
+	"name": "Colisão",
 	"plugin-id": "Sprite",
-	"sid": 939973662199867,
+	"sid": 829997695022885,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Sólido",
+			"sid": 954753469086654
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -20,13 +26,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 4488669,
+						"imageSpriteId": 5850097,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 958376819751291,
+				"sid": 195327655577330,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

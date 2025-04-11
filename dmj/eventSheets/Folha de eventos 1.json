@@ -1,5 +1,61 @@
 {
 	"name": "Folha de eventos 1",
-	"events": [],
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "CanAttack",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 403944685505129
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Player",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-click",
+							"objectClass": "Mouse",
+							"sid": 304117623514625,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-vector-y",
+							"objectClass": "Player",
+							"sid": 361131789613259,
+							"behaviorType": "Plataforma",
+							"parameters": {
+								"vector-y": "-750"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 655895366974904,
+							"parameters": {
+								"seconds": "1",
+								"use-timescale": true
+							}
+						}
+					],
+					"sid": 627405508413236
+				}
+			],
+			"sid": 529482182383508
+		}
+	],
 	"sid": 558634085357818
 }
