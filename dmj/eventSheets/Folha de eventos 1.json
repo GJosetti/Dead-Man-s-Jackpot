@@ -44,10 +44,10 @@
 						{
 							"id": "add-to-eventvar",
 							"objectClass": "System",
-							"sid": 789325204716908,
+							"sid": 577708240185251,
 							"parameters": {
 								"variable": "Power",
-								"value": "0.5"
+								"value": "0.2"
 							}
 						}
 					],
@@ -122,6 +122,54 @@
 				}
 			],
 			"sid": 529482182383508
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 918612828936704,
+					"parameters": {
+						"variable": "Power",
+						"comparison": 4,
+						"value": "25"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 394900452033533,
+					"parameters": {
+						"variable": "Power",
+						"value": "25"
+					}
+				}
+			],
+			"sid": 764490377710411
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 814996965687398
+				}
+			],
+			"actions": [
+				{
+					"id": "set-default-color",
+					"objectClass": "Player",
+					"sid": 131660884549461,
+					"parameters": {
+						"color": "rgbEx(Power *100, 0, 0)"
+					}
+				}
+			],
+			"sid": 468670454708621
 		}
 	],
 	"sid": 558634085357818
