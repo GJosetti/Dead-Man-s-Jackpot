@@ -22,6 +22,28 @@
 			"sid": 512209375545223
 		},
 		{
+			"eventType": "variable",
+			"name": "IsParrying",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 147370166580739
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 527875079631862
+				}
+			],
+			"actions": [],
+			"sid": 131136718263754
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Player",
@@ -37,6 +59,14 @@
 							"sid": 692677370684294,
 							"parameters": {
 								"mouse-button": "left"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 203841017499159,
+							"parameters": {
+								"variable": "CanAttack"
 							}
 						}
 					],
@@ -62,6 +92,14 @@
 							"sid": 602881480153098,
 							"parameters": {
 								"mouse-button": "left"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 715699012802550,
+							"parameters": {
+								"variable": "CanAttack"
 							}
 						}
 					],
@@ -146,30 +184,116 @@
 						}
 					],
 					"sid": 911461154877092
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-click",
+							"objectClass": "Mouse",
+							"sid": 980207053015379,
+							"parameters": {
+								"mouse-button": "right",
+								"click-type": "clicked"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 897941028019568,
+							"parameters": {
+								"variable": "IsParrying",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 420023922058934,
+							"parameters": {
+								"variable": "CanAttack",
+								"value": "false"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 832113071629808,
+							"parameters": {
+								"seconds": "1.0",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 488492416860992,
+							"parameters": {
+								"variable": "IsParrying",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 850091207525107,
+							"parameters": {
+								"variable": "CanAttack",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 755920074412924
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 407393811090723,
+							"parameters": {
+								"variable": "IsParrying"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-default-color",
+							"objectClass": "Player",
+							"sid": 730369865051401,
+							"parameters": {
+								"color": "rgbEx(0, 0, 400)"
+							}
+						}
+					],
+					"sid": 512571940986016
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 857014986955703
+						}
+					],
+					"actions": [
+						{
+							"id": "set-default-color",
+							"objectClass": "Player",
+							"sid": 838085378556837,
+							"parameters": {
+								"color": "rgbEx(Power *50, 0, 0)"
+							}
+						}
+					],
+					"sid": 955467081649620
 				}
 			],
 			"sid": 529482182383508
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "every-tick",
-					"objectClass": "System",
-					"sid": 814996965687398
-				}
-			],
-			"actions": [
-				{
-					"id": "set-default-color",
-					"objectClass": "Player",
-					"sid": 153549063667182,
-					"parameters": {
-						"color": "rgbEx(Power *50, 0, 0)"
-					}
-				}
-			],
-			"sid": 468670454708621
 		},
 		{
 			"eventType": "group",
@@ -198,6 +322,18 @@
 							"parameters": {
 								"x": "863",
 								"y": "random(110,360)"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Arma_teste",
+							"sid": 592330945524950,
+							"parameters": {
+								"object": "Tiro_parry",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
 							}
 						}
 					],
