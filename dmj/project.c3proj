@@ -28,6 +28,13 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "Bullet",
 			"name": "Bullet",
@@ -72,6 +79,14 @@
 				],
 				"subfolders": [],
 				"name": "Inputs"
+			},
+			{
+				"items": [
+					"Vida",
+					"Energy"
+				],
+				"subfolders": [],
+				"name": "UI"
 			}
 		]
 	},

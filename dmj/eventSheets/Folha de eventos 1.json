@@ -32,6 +32,26 @@
 			"sid": 147370166580739
 		},
 		{
+			"eventType": "variable",
+			"name": "Energy",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 520575632510788
+		},
+		{
+			"eventType": "variable",
+			"name": "Vida",
+			"type": "number",
+			"initialValue": "5",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 174511746126126
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -40,7 +60,24 @@
 					"sid": 527875079631862
 				}
 			],
-			"actions": [],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "Vida",
+					"sid": 188496237075275,
+					"parameters": {
+						"text": "\"Life: \" & Vida"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Energy",
+					"sid": 703064159754081,
+					"parameters": {
+						"text": "\"Energy: \" & Energy"
+					}
+				}
+			],
 			"sid": 131136718263754
 		},
 		{
@@ -220,9 +257,9 @@
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 832113071629808,
+							"sid": 511424431167642,
 							"parameters": {
-								"seconds": "1.0",
+								"seconds": "0.3",
 								"use-timescale": true
 							}
 						},
@@ -359,6 +396,76 @@
 						}
 					],
 					"sid": 817336837479873
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Tiro_parry",
+							"sid": 255804492045587,
+							"parameters": {
+								"object": "Player"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Tiro_parry",
+							"sid": 572686631063824
+						}
+					],
+					"sid": 268689593703676,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 358285130037908,
+									"parameters": {
+										"variable": "IsParrying"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 687346291958576,
+									"parameters": {
+										"variable": "Energy",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 714572593694171
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 551244430631654
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 164874312889600,
+									"parameters": {
+										"variable": "Vida",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 877997838223869
+						}
+					]
 				}
 			],
 			"sid": 118421863499568
