@@ -47,8 +47,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 362,
-						"y": 232,
+						"x": 283,
+						"y": 790,
 						"width": 94.20567603651178,
 						"height": 94.20567603651178,
 						"originX": 0.5,
@@ -94,9 +94,9 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 525,
-						"y": 450,
-						"width": 1154,
+						"x": 957,
+						"y": 1044,
+						"width": 1935,
 						"height": 84,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -146,8 +146,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 856.5538016213161,
-						"y": 318.44619837868396,
+						"x": 1976,
+						"y": 560,
 						"width": 57.10760324263211,
 						"height": 21.10760324263211,
 						"originX": 0.5,
@@ -175,7 +175,22 @@
 					"sid": 705404223680381,
 					"tags": "",
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Senóide": {
+							"properties": {
+								"movement": "vertical",
+								"wave": "sine",
+								"period": 1,
+								"period-random": 1.5,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 100,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
 					"instanceFolderItem": {
 						"sid": 705404223680381,
 						"expanded": true,
@@ -186,8 +201,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 874,
-						"y": 353,
+						"x": 1686,
+						"y": 869,
 						"width": 142.86357128393507,
 						"height": 142.86357128393507,
 						"originX": 0.5,
@@ -238,8 +253,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1034,
-						"y": 120,
+						"x": 1996,
+						"y": 400,
 						"width": 54.78104565415818,
 						"height": 11.646364036710795,
 						"originX": 0.5,
@@ -309,12 +324,12 @@
 						"folderNestingLevel": -1
 					},
 					"showing": true,
-					"locked": false,
+					"locked": true,
 					"world": {
-						"x": 926.4390291103298,
-						"y": 470.4390291103298,
-						"width": 1923.787783545245,
-						"height": 981.7877835452449,
+						"x": 974,
+						"y": 526,
+						"width": 1941.332682404936,
+						"height": 1106.0976683834956,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -544,8 +559,8 @@
 	"sid": 824187724994340,
 	"nonworld-instances": [],
 	"effectTypes": [],
-	"width": 1888,
-	"height": 960,
+	"width": 1920,
+	"height": 1080,
 	"unboundedScrolling": false,
 	"vpX": 0.5,
 	"vpY": 0.5,

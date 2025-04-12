@@ -474,15 +474,6 @@
 					],
 					"actions": [
 						{
-							"id": "set-position",
-							"objectClass": "Arma_teste",
-							"sid": 193598696413713,
-							"parameters": {
-								"x": "863",
-								"y": "random(110,360)"
-							}
-						},
-						{
 							"id": "spawn-another-object",
 							"objectClass": "Arma_teste",
 							"sid": 592330945524950,
