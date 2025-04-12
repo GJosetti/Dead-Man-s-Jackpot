@@ -52,6 +52,16 @@
 			"sid": 174511746126126
 		},
 		{
+			"eventType": "variable",
+			"name": "can_parry",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 970074586934974
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -99,11 +109,28 @@
 							}
 						},
 						{
+							"id": "is-on-floor",
+							"objectClass": "Player",
+							"sid": 150552041865687,
+							"behaviorType": "Plataforma",
+							"isInverted": true
+						},
+						{
 							"id": "compare-boolean-eventvar",
 							"objectClass": "System",
 							"sid": 203841017499159,
 							"parameters": {
 								"variable": "CanAttack"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 508014929424575,
+							"parameters": {
+								"variable": "Energy",
+								"comparison": 4,
+								"value": "0"
 							}
 						}
 					],
@@ -132,11 +159,28 @@
 							}
 						},
 						{
+							"id": "is-on-floor",
+							"objectClass": "Player",
+							"sid": 846450106761590,
+							"behaviorType": "Plataforma",
+							"isInverted": true
+						},
+						{
 							"id": "compare-boolean-eventvar",
 							"objectClass": "System",
 							"sid": 715699012802550,
 							"parameters": {
 								"variable": "CanAttack"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 204345649034941,
+							"parameters": {
+								"variable": "Energy",
+								"comparison": 4,
+								"value": "3"
 							}
 						}
 					],
@@ -144,10 +188,10 @@
 						{
 							"id": "set-vector-y",
 							"objectClass": "Player",
-							"sid": 542761572397415,
+							"sid": 499982791689115,
 							"behaviorType": "Plataforma",
 							"parameters": {
-								"vector-y": "-200 *( 1 + Power/10)"
+								"vector-y": "-300 *( 1 + Power/10)"
 							}
 						},
 						{
@@ -169,6 +213,15 @@
 							"parameters": {
 								"variable": "Power",
 								"value": "0"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 932460491563200,
+							"parameters": {
+								"variable": "Energy",
+								"value": "3"
 							}
 						}
 					],
@@ -243,6 +296,14 @@
 								"comparison": 0,
 								"value": "0"
 							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 486021104445425,
+							"parameters": {
+								"variable": "can_parry"
+							}
 						}
 					],
 					"actions": [
@@ -261,6 +322,15 @@
 							"sid": 420023922058934,
 							"parameters": {
 								"variable": "CanAttack",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 123354438939335,
+							"parameters": {
+								"variable": "can_parry",
 								"value": "false"
 							}
 						},
@@ -288,6 +358,24 @@
 							"sid": 850091207525107,
 							"parameters": {
 								"variable": "CanAttack",
+								"value": "true"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 501465856009408,
+							"parameters": {
+								"seconds": "0.3",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 637594781755322,
+							"parameters": {
+								"variable": "can_parry",
 								"value": "true"
 							}
 						}
@@ -338,6 +426,29 @@
 						}
 					],
 					"sid": 955467081649620
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-on-floor",
+							"objectClass": "Player",
+							"sid": 724376365499492,
+							"behaviorType": "Plataforma"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 430073258907083,
+							"parameters": {
+								"variable": "Power",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 258957826719276
 				}
 			],
 			"sid": 529482182383508

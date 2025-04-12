@@ -18,7 +18,9 @@
 					"uid": 2,
 					"sid": 919069565448131,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"onGround": false
+					},
 					"behaviors": {
 						"Plataforma": {
 							"properties": {
