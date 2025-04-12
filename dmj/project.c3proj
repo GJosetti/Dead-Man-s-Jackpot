@@ -57,6 +57,13 @@
 		},
 		{
 			"type": "effect",
+			"id": "screen",
+			"name": "Tela",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
 			"id": "skymen_BetterCRT",
 			"name": "[Better CRT]",
 			"author": "skymen",
@@ -71,7 +78,8 @@
 			"Tiro",
 			"Arma_teste",
 			"Tiro_parry",
-			"Sprite"
+			"Sprite",
+			"Sprite2"
 		],
 		"subfolders": [
 			{

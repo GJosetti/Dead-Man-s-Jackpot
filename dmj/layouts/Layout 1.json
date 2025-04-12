@@ -47,8 +47,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 541.6164755090508,
-						"y": 169.61647550905076,
+						"x": 362,
+						"y": 232,
 						"width": 94.20567603651178,
 						"height": 94.20567603651178,
 						"originX": 0.5,
@@ -253,6 +253,79 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "Sprite2",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 11,
+					"sid": 940590334424805,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"effects": {
+						"Tela": {
+							"isEnabled": true,
+							"parameters": {}
+						},
+						"BetterCRT": {
+							"isEnabled": true,
+							"parameters": {
+								"resolution-x": 1920,
+								"resolution-y": 1080,
+								"distort-intensity": 1,
+								"scanlines-intensity": 0.4,
+								"color-adjustment": [
+									1,
+									1,
+									1,
+									1
+								],
+								"red-offset-x": 0,
+								"red-offset-y": 0,
+								"green-offset-x": 0,
+								"green-offset-y": 0,
+								"blue-offset-x": 0,
+								"blue-offset-y": 0,
+								"barrel-distortion-strength": 0,
+								"barrel-distortion-zoom": 0,
+								"distortion-strength": 1,
+								"distortion-speed": 0.1,
+								"distortion-frequency": 0.2,
+								"bloom-intensity": 1
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 940590334424805,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 926.4390291103298,
+						"y": 470.4390291103298,
+						"width": 1923.787783545245,
+						"height": 981.7877835452449,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 927842751657254,
@@ -261,7 +334,7 @@
 					"effectId": "skymen_BetterCRT",
 					"name": "BetterCRT",
 					"instance": {
-						"isEnabled": true,
+						"isEnabled": false,
 						"parameters": {
 							"resolution-x": 1920,
 							"resolution-y": 1080,

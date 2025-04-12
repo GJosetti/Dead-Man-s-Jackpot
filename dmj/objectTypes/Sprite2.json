@@ -1,18 +1,21 @@
 {
-	"name": "Tiro",
+	"name": "Sprite2",
 	"plugin-id": "Sprite",
-	"sid": 477926618438940,
+	"sid": 358207764922723,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [
+	"behaviorTypes": [],
+	"effectTypes": [
 		{
-			"behaviorId": "Bullet",
-			"name": "Projétil",
-			"sid": 621568493021866
+			"effectId": "screen",
+			"name": "Tela"
+		},
+		{
+			"effectId": "skymen_BetterCRT",
+			"name": "BetterCRT"
 		}
 	],
-	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
@@ -26,13 +29,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 8319074,
+						"imageSpriteId": 8575344,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 364631078984081,
+				"sid": 662354075743747,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
