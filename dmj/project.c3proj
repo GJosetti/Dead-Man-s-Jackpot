@@ -54,6 +54,14 @@
 			"name": "Sólido",
 			"author": "Scirra",
 			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "skymen_BetterCRT",
+			"name": "[Better CRT]",
+			"author": "skymen",
+			"bundled": false,
+			"version": "2.0.0.2"
 		}
 	],
 	"uniqueId": "781yszjylkn",
@@ -62,7 +70,8 @@
 			"Colisão",
 			"Tiro",
 			"Arma_teste",
-			"Tiro_parry"
+			"Tiro_parry",
+			"Sprite"
 		],
 		"subfolders": [
 			{

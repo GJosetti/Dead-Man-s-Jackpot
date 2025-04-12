@@ -94,8 +94,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 488,
-						"y": 454,
+						"x": 525,
+						"y": 450,
 						"width": 1154,
 						"height": 84,
 						"originX": 0.5,
@@ -253,66 +253,42 @@
 						"angle": 0,
 						"zElevation": 0
 					}
-				},
-				{
-					"type": "Energy",
-					"properties": {
-						"text": "Text",
-						"enable-bbcode": true,
-						"font": "Arial",
-						"size": 18,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
-						"wrapping": "word",
-						"text-direction": "ltr",
-						"icon-set": -1,
-						"initially-visible": true,
-						"origin": "top-left",
-						"read-aloud": false
-					},
-					"uid": 10,
-					"sid": 863676220165386,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 863676220165386,
-						"expanded": true,
-						"folderName": "",
-						"indexInFolder": -1,
-						"folderNestingLevel": -1
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 19,
-						"y": 67,
-						"width": 200,
-						"height": 30,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
 				}
 			],
 			"sid": 927842751657254,
-			"effectTypes": [],
+			"effectTypes": [
+				{
+					"effectId": "skymen_BetterCRT",
+					"name": "BetterCRT",
+					"instance": {
+						"isEnabled": true,
+						"parameters": {
+							"resolution-x": 1920,
+							"resolution-y": 1080,
+							"distort-intensity": 0.5,
+							"scanlines-intensity": 0.25,
+							"color-adjustment": [
+								1,
+								1,
+								1,
+								1
+							],
+							"red-offset-x": 0,
+							"red-offset-y": 0,
+							"green-offset-x": 0,
+							"green-offset-y": 0,
+							"blue-offset-x": 0,
+							"blue-offset-y": 0,
+							"barrel-distortion-strength": 0,
+							"barrel-distortion-zoom": 0,
+							"distortion-strength": 1,
+							"distortion-speed": 0.5,
+							"distortion-frequency": 0.5,
+							"bloom-intensity": 1
+						}
+					}
+				}
+			],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
 			"isHTMLElementsLayer": false,
@@ -389,6 +365,62 @@
 						"y": 22,
 						"width": 250,
 						"height": 64,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Energy",
+					"properties": {
+						"text": "Text",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 18,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 10,
+					"sid": 863676220165386,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 863676220165386,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 19,
+						"y": 67,
+						"width": 200,
+						"height": 30,
 						"originX": 0,
 						"originY": 0,
 						"color": [

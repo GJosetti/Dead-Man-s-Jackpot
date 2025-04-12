@@ -126,11 +126,11 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 508014929424575,
+							"sid": 356750751420588,
 							"parameters": {
 								"variable": "Energy",
-								"comparison": 4,
-								"value": "0"
+								"comparison": 5,
+								"value": "3"
 							}
 						}
 					],
@@ -176,10 +176,10 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 204345649034941,
+							"sid": 801542608223144,
 							"parameters": {
 								"variable": "Energy",
-								"comparison": 4,
+								"comparison": 5,
 								"value": "3"
 							}
 						}
