@@ -35,6 +35,13 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Tilemap",
+			"name": "Mosaico",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "Bullet",
 			"name": "Projétil",
@@ -45,13 +52,6 @@
 			"type": "behavior",
 			"id": "Platform",
 			"name": "Plataforma",
-			"author": "Scirra",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "Sin",
-			"name": "Senóide",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -81,12 +81,11 @@
 	"uniqueId": "781yszjylkn",
 	"objectTypes": {
 		"items": [
-			"Colisão",
 			"Tiro",
 			"Arma_teste",
 			"Tiro_parry",
-			"Sprite",
-			"Sprite2"
+			"Sprite2",
+			"Colisão"
 		],
 		"subfolders": [
 			{
@@ -111,6 +110,13 @@
 				],
 				"subfolders": [],
 				"name": "UI"
+			},
+			{
+				"items": [
+					"Mosaico"
+				],
+				"subfolders": [],
+				"name": "Tiles"
 			}
 		]
 	},
@@ -244,12 +250,12 @@
 		"authorEmail": "",
 		"authorWebsite": "",
 		"appId": "",
-		"pixelRounding": true,
+		"pixelRounding": false,
 		"zAxisScale": "normalized",
 		"fov": 0.7853981633974483,
 		"useLoaderLayout": false,
 		"fullscreenMode": "letterbox-scale",
-		"fullscreenQuality": "low",
+		"fullscreenQuality": "high",
 		"viewportFit": "auto",
 		"backgroundColor": [
 			0,
@@ -289,7 +295,7 @@
 		"exportFileStructure": "folders",
 		"uidAllocationMode": "increment"
 	},
-	"viewportWidth": 1920,
-	"viewportHeight": 1080,
+	"viewportWidth": 384,
+	"viewportHeight": 216,
 	"firstLayout": null
 }

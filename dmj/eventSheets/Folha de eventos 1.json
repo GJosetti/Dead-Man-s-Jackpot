@@ -419,9 +419,9 @@
 						{
 							"id": "set-default-color",
 							"objectClass": "Player",
-							"sid": 838085378556837,
+							"sid": 990982333038061,
 							"parameters": {
-								"color": "rgbEx(Power *50, 0, 0)"
+								"color": "rgbEx(100, 100,100)"
 							}
 						}
 					],
@@ -499,11 +499,11 @@
 					],
 					"actions": [
 						{
-							"id": "set-angle",
+							"id": "set-mirrored",
 							"objectClass": "Arma_teste",
-							"sid": 670165235569829,
+							"sid": 821302502478003,
 							"parameters": {
-								"angle": "180"
+								"state": "mirrored"
 							}
 						}
 					],
@@ -578,6 +578,27 @@
 							"sid": 877997838223869
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "Tiro_parry",
+							"sid": 102803565717029
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle",
+							"objectClass": "Tiro_parry",
+							"sid": 547165838164770,
+							"parameters": {
+								"angle": "180"
+							}
+						}
+					],
+					"sid": 646879903946266
 				}
 			],
 			"sid": 118421863499568
