@@ -8,6 +8,10 @@
 	"members": [
 		"Colisão",
 		"EfeitoCrt",
-		"Player"
+		"Player",
+		"Arma_teste",
+		"Tiro_parry",
+		"Tiro",
+		"Camera"
 	]
 }

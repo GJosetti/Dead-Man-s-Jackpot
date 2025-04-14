@@ -35,7 +35,7 @@
 			"eventType": "variable",
 			"name": "Energy",
 			"type": "number",
-			"initialValue": "0",
+			"initialValue": "90",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -45,7 +45,7 @@
 			"eventType": "variable",
 			"name": "Vida",
 			"type": "number",
-			"initialValue": "5",
+			"initialValue": "100",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -86,11 +86,27 @@
 					"parameters": {
 						"text": "\"Energy: \" & Energy"
 					}
-				},
+				}
+			],
+			"sid": 131136718263754
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 923307668785568,
+					"parameters": {
+						"interval-seconds": "0.016"
+					}
+				}
+			],
+			"actions": [
 				{
 					"id": "set-position",
 					"objectClass": "Camera",
-					"sid": 395976781174350,
+					"sid": 215254803055091,
 					"parameters": {
 						"x": "lerp(Camera.X,Player.X,0.1)",
 						"y": "Camera.y"
@@ -99,7 +115,7 @@
 				{
 					"id": "set-height",
 					"objectClass": "Arma_teste",
-					"sid": 320768798365984,
+					"sid": 778338920429106,
 					"parameters": {
 						"height": "lerp(Arma_teste.Height, 54,0.1)"
 					}
@@ -107,13 +123,60 @@
 				{
 					"id": "set-width",
 					"objectClass": "Arma_teste",
-					"sid": 428640481125730,
+					"sid": 444283808690941,
 					"parameters": {
 						"width": "lerp(Arma_teste.Width, -65,0.1)"
 					}
+				},
+				{
+					"id": "set-height",
+					"objectClass": "TrainingDoll",
+					"sid": 857089064609503,
+					"parameters": {
+						"height": "lerp(TrainingDoll.Height, 43,0.1)"
+					}
+				},
+				{
+					"id": "set-width",
+					"objectClass": "TrainingDoll",
+					"sid": 572936015938354,
+					"parameters": {
+						"width": "lerp(TrainingDoll.Width, 43,0.1)"
+					}
 				}
 			],
-			"sid": 131136718263754
+			"sid": 457286801344145
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 486847250756154
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "Arma_teste",
+					"sid": 952770879634832,
+					"parameters": {
+						"state": "mirrored"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Tiro",
+					"sid": 370860377541230
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Tiro_parry",
+					"sid": 444609640346046
+				}
+			],
+			"sid": 575381494356524
 		},
 		{
 			"eventType": "group",
@@ -213,10 +276,10 @@
 						{
 							"id": "set-vector-y",
 							"objectClass": "Player",
-							"sid": 499982791689115,
+							"sid": 317543729478476,
 							"behaviorType": "Plataforma",
 							"parameters": {
-								"vector-y": "-300 *( 1 + Power/10)"
+								"vector-y": "-300 *( 1 + Power/20)"
 							}
 						},
 						{
@@ -362,10 +425,10 @@
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 511424431167642,
+							"sid": 514345513394669,
 							"parameters": {
 								"seconds": "0.3",
-								"use-timescale": true
+								"use-timescale": false
 							}
 						},
 						{
@@ -479,6 +542,27 @@
 						}
 					],
 					"sid": 258957826719276
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Tiro",
+							"sid": 249205975941741,
+							"parameters": {
+								"object": "Colisão"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Tiro",
+							"sid": 802810987383559
+						}
+					],
+					"sid": 337966327010647
 				}
 			],
 			"sid": 529482182383508
@@ -518,7 +602,7 @@
 						{
 							"id": "set-scale",
 							"objectClass": "Arma_teste",
-							"sid": 589285430256436,
+							"sid": 111467732646572,
 							"parameters": {
 								"scale": "0.5"
 							}
@@ -582,39 +666,37 @@
 							],
 							"actions": [
 								{
-									"id": "set-object-time-scale",
+									"id": "set-time-scale",
 									"objectClass": "System",
-									"sid": 194098142859087,
+									"sid": 259236689349202,
 									"parameters": {
-										"object": "HitStop",
 										"time-scale": "0"
-									}
-								},
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 456456151949845,
-									"parameters": {
-										"seconds": "0.3",
-										"use-timescale": true
-									}
-								},
-								{
-									"id": "set-object-time-scale",
-									"objectClass": "System",
-									"sid": 597363030778116,
-									"parameters": {
-										"object": "HitStop",
-										"time-scale": "1"
 									}
 								},
 								{
 									"id": "add-to-eventvar",
 									"objectClass": "System",
-									"sid": 687346291958576,
+									"sid": 501600186205556,
 									"parameters": {
 										"variable": "Energy",
 										"value": "1"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 635439809147568,
+									"parameters": {
+										"seconds": "0.3",
+										"use-timescale": false
+									}
+								},
+								{
+									"id": "set-time-scale",
+									"objectClass": "System",
+									"sid": 772973101131118,
+									"parameters": {
+										"time-scale": "1"
 									}
 								}
 							],
@@ -664,9 +746,69 @@
 						}
 					],
 					"sid": 646879903946266
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Tiro_parry",
+							"sid": 173044889833864,
+							"parameters": {
+								"object": "Colisão"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Tiro_parry",
+							"sid": 838485808684865
+						}
+					],
+					"sid": 620686745554593
 				}
 			],
 			"sid": 118421863499568
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "TrainingDoll",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "TrainingDoll",
+							"sid": 251475593310042,
+							"parameters": {
+								"object": "Tiro"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Tiro",
+							"sid": 916204086377232
+						},
+						{
+							"id": "set-scale",
+							"objectClass": "TrainingDoll",
+							"sid": 739007079269001,
+							"parameters": {
+								"scale": "1.1"
+							}
+						}
+					],
+					"sid": 888002763739536
+				}
+			],
+			"sid": 677618579755281
 		}
 	],
 	"sid": 558634085357818

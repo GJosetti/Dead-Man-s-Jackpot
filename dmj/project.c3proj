@@ -93,7 +93,8 @@
 			"Tiro_parry",
 			"EfeitoCrt",
 			"Colisão",
-			"Camera"
+			"Camera",
+			"TrainingDoll"
 		],
 		"subfolders": [
 			{
