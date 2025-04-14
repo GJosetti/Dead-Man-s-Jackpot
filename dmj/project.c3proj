@@ -57,6 +57,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "scrollto",
+			"name": "Centrar em",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "solid",
 			"name": "Sólido",
 			"author": "Scirra",
@@ -84,8 +91,9 @@
 			"Tiro",
 			"Arma_teste",
 			"Tiro_parry",
-			"Sprite2",
-			"Colisão"
+			"EfeitoCrt",
+			"Colisão",
+			"Camera"
 		],
 		"subfolders": [
 			{

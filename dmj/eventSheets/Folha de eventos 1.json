@@ -86,6 +86,31 @@
 					"parameters": {
 						"text": "\"Energy: \" & Energy"
 					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "Camera",
+					"sid": 395976781174350,
+					"parameters": {
+						"x": "lerp(Camera.X,Player.X,0.1)",
+						"y": "Camera.y"
+					}
+				},
+				{
+					"id": "set-height",
+					"objectClass": "Arma_teste",
+					"sid": 320768798365984,
+					"parameters": {
+						"height": "lerp(Arma_teste.Height, 54,0.1)"
+					}
+				},
+				{
+					"id": "set-width",
+					"objectClass": "Arma_teste",
+					"sid": 428640481125730,
+					"parameters": {
+						"width": "lerp(Arma_teste.Width, -65,0.1)"
+					}
 				}
 			],
 			"sid": 131136718263754
@@ -386,6 +411,32 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 625353987817875,
+							"parameters": {
+								"variable": "Power",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-default-color",
+							"objectClass": "Player",
+							"sid": 564183129918803,
+							"parameters": {
+								"color": "rgbEx(100, 100,100)"
+							}
+						}
+					],
+					"sid": 959206604782312
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "compare-boolean-eventvar",
 							"objectClass": "System",
 							"sid": 407393811090723,
@@ -405,27 +456,6 @@
 						}
 					],
 					"sid": 512571940986016
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "else",
-							"objectClass": "System",
-							"sid": 857014986955703
-						}
-					],
-					"actions": [
-						{
-							"id": "set-default-color",
-							"objectClass": "Player",
-							"sid": 990982333038061,
-							"parameters": {
-								"color": "rgbEx(100, 100,100)"
-							}
-						}
-					],
-					"sid": 955467081649620
 				},
 				{
 					"eventType": "block",
@@ -476,13 +506,21 @@
 						{
 							"id": "spawn-another-object",
 							"objectClass": "Arma_teste",
-							"sid": 592330945524950,
+							"sid": 863365645052257,
 							"parameters": {
 								"object": "Tiro_parry",
 								"layer": "0",
-								"image-point": "0",
+								"image-point": "1",
 								"create-hierarchy": false,
 								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-scale",
+							"objectClass": "Arma_teste",
+							"sid": 589285430256436,
+							"parameters": {
+								"scale": "0.5"
 							}
 						}
 					],
