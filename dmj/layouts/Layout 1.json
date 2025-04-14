@@ -262,8 +262,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 304.4487524778371,
-						"y": 174.18336483635258,
+						"x": 304.73309742345504,
+						"y": 176.45817126104308,
 						"width": -65.71724296666666,
 						"height": 54.28815708789532,
 						"originX": 0.391304347826087,
@@ -298,9 +298,9 @@
 							"properties": {
 								"max-speed": 150,
 								"acceleration": 1500,
-								"deceleration": 1500,
+								"deceleration": 2000,
 								"jump-strength": 450,
-								"gravity": 1500,
+								"gravity": 1000,
 								"max-fall-speed": 1000,
 								"double-jump": false,
 								"jump-sustain": 0,

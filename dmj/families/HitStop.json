@@ -1,0 +1,13 @@
+{
+	"name": "HitStop",
+	"plugin-id": "Sprite",
+	"sid": 963220172212603,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Colisão",
+		"EfeitoCrt",
+		"Player"
+	]
+}

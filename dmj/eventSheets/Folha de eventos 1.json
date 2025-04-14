@@ -582,6 +582,33 @@
 							],
 							"actions": [
 								{
+									"id": "set-object-time-scale",
+									"objectClass": "System",
+									"sid": 194098142859087,
+									"parameters": {
+										"object": "HitStop",
+										"time-scale": "0"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 456456151949845,
+									"parameters": {
+										"seconds": "0.3",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-object-time-scale",
+									"objectClass": "System",
+									"sid": 597363030778116,
+									"parameters": {
+										"object": "HitStop",
+										"time-scale": "1"
+									}
+								},
+								{
 									"id": "add-to-eventvar",
 									"objectClass": "System",
 									"sid": 687346291958576,

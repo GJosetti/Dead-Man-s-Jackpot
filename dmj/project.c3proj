@@ -131,7 +131,9 @@
 	"autosaveData": null,
 	"containers": [],
 	"families": {
-		"items": [],
+		"items": [
+			"HitStop"
+		],
 		"subfolders": []
 	},
 	"layouts": {
