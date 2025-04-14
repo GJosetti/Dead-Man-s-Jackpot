@@ -61,11 +61,11 @@
 					"behaviors": {},
 					"ownData": {
 						"tilemapData": {
-							"width": 40,
+							"width": 66,
 							"height": 9,
-							"max-width": 40,
+							"max-width": 67,
 							"max-height": 9,
-							"data": "6x0,2,2x6,6x0,2,2x6,6x0,2,2x6,6x0,2,2x6,6x0,2,2x6,6x0,2,2x6,6x0,2,2x6,6x0,2,2x6,6x0,1h,2x5h,4x0,1,4x5,4x0,2,6,6h,2x6,4x0,2,6,6h,2x6,4x0,2,6,6h,2x6,4x0,2,6,6h,2x6,4x0,1h,4x5h,6x0,1,2x5,6x0,3,2x6,6x0,3,2x6,6x0,3,2x6,6x0,3,2x6,6x0,3,2x6,6x0,3,2x6,6x0,3,2x6,6x0,3,2x6,6x0,3,2x6,6x0,3,2x6,6x0,3,2x6,6x0,3,2x6,6x0,3,2x6,6x0,3,2x6,2x0,1,6x5,2x0,2,5x6h,6,2x0,2,4x6h,2x6,2x0,2,4x6h,2x6,2x0,2,4x6h,2x6,2x0,1h,6x5h,6x0,3,2x6,6x0,3,2x6,18x0"
+							"data": "6x0,2,2x6,6x0,2,2x6,6x0,2,2x6,6x0,2,2x6,6x0,2,2x6,6x0,2,2x6,6x0,2,2x6,6x0,2,2x6,6x0,1h,2x5h,4x0,1,4x5,4x0,2,6,6h,2x6,4x0,2,6,6h,2x6,4x0,2,6,6h,2x6,4x0,2,6,6h,2x6,4x0,1h,4x5h,6x0,1,2x5,6x0,3,2x6,6x0,3,2x6,6x0,3,2x6,6x0,3,2x6,6x0,3,2x6,6x0,3,2x6,6x0,3,2x6,6x0,3,2x6,6x0,3,2x6,6x0,3,2x6,6x0,3,2x6,6x0,3,2x6,6x0,3,2x6,6x0,1h,2x5h,3x0,1,5x5,3x0,2,4x6h,6,3x0,2,3x6h,2x6,3x0,2,3x6h,2x6,3x0,2,3x6h,2x6,3x0,1h,5x5h,6x0,1,2x5,6x0,3,2x6,6x0,2h,2x6h,6x0,2h,2x6h,6x0,2h,2x6h,6x0,2h,2x6h,6x0,2h,2x6h,6x0,2h,2x6h,6x0,2h,2x6h,6x0,2h,2x6h,6x0,2h,2x6h,6x0,2h,2x6h,6x0,2h,2x6h,6x0,2h,2x6h,6x0,2h,2x6h,6x0,1h,2x5h,2x0,1,6x5,2x0,2,6x6h,2x0,3,6x6h,2x0,3,6x6h,2x0,2,6x6h,2x0,2,6x6h,2x0,2,6x6h,2x0,2,6x6,2x0,2,6x6,2x0,2,6x6,2x0,2,6x6,2x0,2,6x6,2x0,2,6x6,2x0,2,6x6,9x0"
 						},
 						"tile-width": 32,
 						"tile-height": 32,
@@ -86,7 +86,7 @@
 					"world": {
 						"x": -0.11696151094783147,
 						"y": -0.22718109122240548,
-						"width": 1297.6885960839172,
+						"width": 2143.5739709013196,
 						"height": 317.1939489220252,
 						"originX": 0,
 						"originY": 0,
@@ -134,6 +134,503 @@
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [
+				{
+					"type": "txt_1",
+					"properties": {
+						"text": "AD -Movimentação\nEspaço- Pulo\n",
+						"enable-bbcode": true,
+						"font": "system-ui",
+						"size": 12,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.4,
+							0.4,
+							0.4,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 21,
+					"sid": 254896366695805,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Senóide": {
+							"properties": {
+								"movement": "vertical",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 10,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 254896366695805,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 65.75769751004971,
+						"y": 10.080003878113907,
+						"width": 200,
+						"height": 47.67556779288888,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": -1
+					}
+				},
+				{
+					"type": "txt_1",
+					"properties": {
+						"text": "Mouse 1 - Tiro\nMouse 2 - Parry\n \n",
+						"enable-bbcode": true,
+						"font": "system-ui",
+						"size": 12,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.4,
+							0.4,
+							0.4,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 22,
+					"sid": 333981244051385,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Senóide": {
+							"properties": {
+								"movement": "vertical",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 2,
+								"period-offset-random": 0,
+								"magnitude": 10,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 333981244051385,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 135.20374626325133,
+						"y": 115.23137867548124,
+						"width": 200,
+						"height": 47.67556779288888,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": -1
+					}
+				},
+				{
+					"type": "txt_1",
+					"properties": {
+						"text": "Para atirar você tem que acumular 3 de energia, dando parry nos ataques dos inimigos",
+						"enable-bbcode": true,
+						"font": "system-ui",
+						"size": 12,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.4,
+							0.4,
+							0.4,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 23,
+					"sid": 676537970668453,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Senóide": {
+							"properties": {
+								"movement": "vertical",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 2,
+								"period-offset-random": 0,
+								"magnitude": 10,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 676537970668453,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 298.66328847530923,
+						"y": 18.248212116963394,
+						"width": 220.4826937053673,
+						"height": 76.5603704761748,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": -1
+					}
+				},
+				{
+					"type": "txt_1",
+					"properties": {
+						"text": "Atacar te impulsiona para cima. Use isso a seu favor!",
+						"enable-bbcode": true,
+						"font": "system-ui",
+						"size": 12,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.4,
+							0.4,
+							0.4,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 24,
+					"sid": 727529168325192,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Senóide": {
+							"properties": {
+								"movement": "vertical",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 2,
+								"period-offset-random": 0,
+								"magnitude": 10,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 727529168325192,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 701.5818416295529,
+						"y": 25.133301614919475,
+						"width": 220.4826937053673,
+						"height": 76.5603704761748,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": -1
+					}
+				},
+				{
+					"type": "txt_1",
+					"properties": {
+						"text": "Ao segurar o mouse você carrega seu tiro e pula mais alto!",
+						"enable-bbcode": true,
+						"font": "system-ui",
+						"size": 12,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.4,
+							0.4,
+							0.4,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 25,
+					"sid": 289029536656154,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Senóide": {
+							"properties": {
+								"movement": "vertical",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 2,
+								"period-offset-random": 0,
+								"magnitude": 10,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 289029536656154,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1377.0333312355938,
+						"y": 43.48270247671847,
+						"width": 220.4826937053673,
+						"height": 76.5603704761748,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": -1
+					}
+				},
+				{
+					"type": "txt_1",
+					"properties": {
+						"text": "Parabéns por chegar ao fim do tutorial, aperte R para reiniciar",
+						"enable-bbcode": true,
+						"font": "system-ui",
+						"size": 12,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.4,
+							0.4,
+							0.4,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 26,
+					"sid": 644367622289941,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Senóide": {
+							"properties": {
+								"movement": "vertical",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 2,
+								"period-offset-random": 0,
+								"magnitude": 2,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 644367622289941,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1840.6831546308363,
+						"y": 8.164913640930909,
+						"width": 220.4826937053673,
+						"height": 76.5603704761748,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": -1
+					}
+				},
+				{
+					"type": "txt_1",
+					"properties": {
+						"text": "<------Libere sua raiva aqui",
+						"enable-bbcode": true,
+						"font": "system-ui",
+						"size": 12,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.4,
+							0.4,
+							0.4,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 27,
+					"sid": 988667755581573,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Senóide": {
+							"properties": {
+								"movement": "vertical",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 2,
+								"period-offset-random": 0,
+								"magnitude": 0,
+								"magnitude-random": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 988667755581573,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1446.8266141020533,
+						"y": 165.7217205266415,
+						"width": 220.4826937053673,
+						"height": 76.5603704761748,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": -1
+					}
+				},
 				{
 					"type": "Tiro",
 					"properties": {
@@ -304,7 +801,7 @@
 								"max-fall-speed": 1000,
 								"double-jump": false,
 								"jump-sustain": 0,
-								"default-controls": true,
+								"default-controls": false,
 								"enabled": true
 							}
 						}
@@ -418,9 +915,9 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 607.9841279735527,
+						"x": 849.8720586445428,
 						"y": 246.29692647457213,
-						"width": 1216.3958526231643,
+						"width": 1700.1717139651444,
 						"height": 89.10415228665471,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -504,10 +1001,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1301.292661007934,
-						"y": 129.3373243611036,
-						"width": 43,
-						"height": 43,
+						"x": 1429.0045359718724,
+						"y": 184.60330254731878,
+						"width": 35.95438484164086,
+						"height": 35.95438484164086,
 						"originX": 0.3953488372093023,
 						"originY": 0.5348837209302325,
 						"color": [
@@ -599,9 +1096,143 @@
 					"locked": false,
 					"world": {
 						"x": 1055.0794584144514,
-						"y": 137.6892977766496,
+						"y": 152.92650460464438,
 						"width": 187.09623308380554,
-						"height": 128.93715112683688,
+						"height": 98.4627374708473,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Arma_teste",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 18,
+					"sid": 485685107190749,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 485685107190749,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1295.7561378192986,
+						"y": 173.70396922877464,
+						"width": -65.71724296666666,
+						"height": 54.28815708789532,
+						"originX": 0.391304347826087,
+						"originY": 0.4842105263157895,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 6.282416508954417,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Colisão",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 20,
+					"sid": 246285569453786,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Sólido": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 246285569453786,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1888.3715424005145,
+						"y": 182.63418427528325,
+						"width": 446.71555845093275,
+						"height": 220.64839690309222,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Colisão",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 19,
+					"sid": 381833559617529,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Sólido": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 381833559617529,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 2101.388375377377,
+						"y": 2.024111720847614,
+						"width": 19.470638647834164,
+						"height": 181.84038328751996,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -850,9 +1481,9 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 2483,
-						"y": -720,
-						"width": 1941.332682404936,
+						"x": 1040,
+						"y": 40,
+						"width": 2357.332682404936,
 						"height": 1106.0976683834956,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -904,7 +1535,7 @@
 	"sid": 824187724994340,
 	"nonworld-instances": [],
 	"effectTypes": [],
-	"width": 1500,
+	"width": 2100,
 	"height": 288,
 	"unboundedScrolling": false,
 	"vpX": 0.5,

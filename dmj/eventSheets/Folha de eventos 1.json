@@ -35,7 +35,7 @@
 			"eventType": "variable",
 			"name": "Energy",
 			"type": "number",
-			"initialValue": "90",
+			"initialValue": "0",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -524,6 +524,32 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 161427643977695,
+							"parameters": {
+								"variable": "Power",
+								"comparison": 4,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-default-color",
+							"objectClass": "Player",
+							"sid": 787676293009034,
+							"parameters": {
+								"color": "rgbEx(Power *20, 0, 0)"
+							}
+						}
+					],
+					"sid": 992374344915008
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "is-on-floor",
 							"objectClass": "Player",
 							"sid": 724376365499492,
@@ -563,6 +589,97 @@
 						}
 					],
 					"sid": 337966327010647
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Teclado",
+							"sid": 857030707974985,
+							"parameters": {
+								"key": 68
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Player",
+							"sid": 922399799455646,
+							"behaviorType": "Plataforma",
+							"parameters": {
+								"control": "right"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "Player",
+							"sid": 968083232743540,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 433261340802368
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Teclado",
+							"sid": 320030110684981,
+							"parameters": {
+								"key": 65
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Player",
+							"sid": 701468758497002,
+							"behaviorType": "Plataforma",
+							"parameters": {
+								"control": "left"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "Player",
+							"sid": 911297597126054,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 870900075826600
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Teclado",
+							"sid": 731671480227586,
+							"parameters": {
+								"key": 32
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Player",
+							"sid": 702471971974327,
+							"behaviorType": "Plataforma",
+							"parameters": {
+								"control": "jump"
+							}
+						}
+					],
+					"sid": 997050887707957
 				}
 			],
 			"sid": 529482182383508
@@ -676,10 +793,10 @@
 								{
 									"id": "add-to-eventvar",
 									"objectClass": "System",
-									"sid": 501600186205556,
+									"sid": 367157350056037,
 									"parameters": {
 										"variable": "Energy",
-										"value": "1"
+										"value": "3"
 									}
 								},
 								{
@@ -809,6 +926,27 @@
 				}
 			],
 			"sid": 677618579755281
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 734338712914580,
+					"parameters": {
+						"key": 82
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 866563445440693
+				}
+			],
+			"sid": 972829669997288
 		}
 	],
 	"sid": 558634085357818

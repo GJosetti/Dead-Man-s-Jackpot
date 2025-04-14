@@ -1,0 +1,16 @@
+{
+	"name": "txt_1",
+	"plugin-id": "Text",
+	"sid": 345856546560064,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Senóide",
+			"sid": 891323932869706
+		}
+	],
+	"effectTypes": []
+}
