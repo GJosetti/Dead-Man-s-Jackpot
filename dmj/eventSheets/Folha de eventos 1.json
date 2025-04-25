@@ -197,13 +197,6 @@
 							}
 						},
 						{
-							"id": "is-on-floor",
-							"objectClass": "Player",
-							"sid": 150552041865687,
-							"behaviorType": "Plataforma",
-							"isInverted": true
-						},
-						{
 							"id": "compare-boolean-eventvar",
 							"objectClass": "System",
 							"sid": 203841017499159,
@@ -245,13 +238,6 @@
 							"parameters": {
 								"mouse-button": "left"
 							}
-						},
-						{
-							"id": "is-on-floor",
-							"objectClass": "Player",
-							"sid": 846450106761590,
-							"behaviorType": "Plataforma",
-							"isInverted": true
 						},
 						{
 							"id": "compare-boolean-eventvar",
@@ -545,29 +531,6 @@
 						}
 					],
 					"sid": 992374344915008
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-on-floor",
-							"objectClass": "Player",
-							"sid": 724376365499492,
-							"behaviorType": "Plataforma"
-						}
-					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 430073258907083,
-							"parameters": {
-								"variable": "Power",
-								"value": "0"
-							}
-						}
-					],
-					"sid": 258957826719276
 				},
 				{
 					"eventType": "block",
