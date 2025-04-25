@@ -8,8 +8,15 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Keyboard",
-			"name": "Teclado",
+			"name": "Keyboard",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -30,63 +37,63 @@
 		{
 			"type": "plugin",
 			"id": "Text",
-			"name": "Texto",
+			"name": "Text",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Tilemap",
-			"name": "Mosaico",
+			"name": "Tilemap",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Bullet",
-			"name": "Projétil",
+			"name": "Bullet",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Platform",
-			"name": "Plataforma",
+			"name": "Platform",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Sin",
-			"name": "Senóide",
+			"name": "Sine",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "scrollto",
-			"name": "Centrar em",
+			"name": "Scroll To",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "solid",
-			"name": "Sólido",
+			"name": "Solid",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "effect",
 			"id": "screen",
-			"name": "Tela",
+			"name": "Screen",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "effect",
 			"id": "skymen_BetterCRT",
-			"name": "[Better CRT]",
+			"name": "Better CRT",
 			"author": "skymen",
 			"bundled": false,
 			"version": "2.0.0.2"
@@ -101,7 +108,8 @@
 			"EfeitoCrt",
 			"Colisão",
 			"Camera",
-			"TrainingDoll"
+			"TrainingDoll",
+			"Audio"
 		],
 		"subfolders": [
 			{
@@ -169,7 +177,56 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "JackpotDeath.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 303868279673722,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "EnemyHurt.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 911418577035499,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "MouseClick.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 927473659433255,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "PlayerDeath.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 956595341626116,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "PlayerHurt.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 587779103929340,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "PlayerParry.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 649233057963882,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"music": {
