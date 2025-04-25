@@ -279,6 +279,15 @@
 								"create-hierarchy": false,
 								"template-name": "\"\""
 							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 321915412987213,
+							"parameters": {
+								"variable": "Power",
+								"value": "0"
+							}
 						}
 					],
 					"sid": 758478998581489,
@@ -289,21 +298,11 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 337254123528309,
+									"sid": 270136260654736,
 									"parameters": {
 										"variable": "Power",
-										"comparison": 4,
+										"comparison": 3,
 										"value": "10"
-									}
-								},
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 382561379611230,
-									"parameters": {
-										"variable": "Energy",
-										"comparison": 5,
-										"value": "2"
 									}
 								}
 							],
@@ -311,19 +310,10 @@
 								{
 									"id": "subtract-from-eventvar",
 									"objectClass": "System",
-									"sid": 648923432812812,
+									"sid": 976078685643832,
 									"parameters": {
 										"variable": "Energy",
-										"value": "2"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 106492328960096,
-									"parameters": {
-										"variable": "Power",
-										"value": "0"
+										"value": "1"
 									}
 								}
 							],
@@ -342,19 +332,10 @@
 								{
 									"id": "subtract-from-eventvar",
 									"objectClass": "System",
-									"sid": 383327096831083,
+									"sid": 909471759607183,
 									"parameters": {
 										"variable": "Energy",
-										"value": "1"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 739344731208252,
-									"parameters": {
-										"variable": "Power",
-										"value": "0"
+										"value": "2"
 									}
 								}
 							],
