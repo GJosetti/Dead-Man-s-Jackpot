@@ -798,7 +798,7 @@
 								"deceleration": 2000,
 								"jump-strength": 450,
 								"gravity": 1200,
-								"max-fall-speed": 1000,
+								"max-fall-speed": 500,
 								"double-jump": false,
 								"jump-sustain": 0,
 								"default-controls": false,
@@ -1233,6 +1233,100 @@
 						"y": 2.024111720847614,
 						"width": 19.470638647834164,
 						"height": 181.84038328751996,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Colisão",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 29,
+					"sid": 673572678131410,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Sólido": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 673572678131410,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": -9.702491104055696,
+						"y": 121.51253817540228,
+						"width": 19.470638647834164,
+						"height": 256.18728390861725,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Colisão",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 30,
+					"sid": 381738200030051,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Sólido": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 381738200030051,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1047.3349009249043,
+						"y": -22.446587592383935,
+						"width": 2098.9642116918376,
+						"height": 45.7639139788061,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

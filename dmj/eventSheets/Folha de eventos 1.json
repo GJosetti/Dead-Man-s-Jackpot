@@ -725,34 +725,6 @@
 						}
 					],
 					"sid": 503760053860964
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-collision-with-another-object",
-							"objectClass": "Tiro",
-							"sid": 758227004896637,
-							"parameters": {
-								"object": "TrainingDoll"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 427734911224518,
-							"parameters": {
-								"audio-file": "EnemyHurt",
-								"loop": "not-looping",
-								"volume": "0",
-								"stereo-pan": "0",
-								"tag-optional": "\"\""
-							}
-						}
-					],
-					"sid": 174450173648566
 				}
 			],
 			"sid": 529482182383508
@@ -1041,6 +1013,18 @@
 					],
 					"actions": [
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 173699892307908,
+							"parameters": {
+								"audio-file": "EnemyHurt",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"id": "destroy",
 							"objectClass": "Tiro",
 							"sid": 916204086377232
@@ -1048,9 +1032,9 @@
 						{
 							"id": "set-scale",
 							"objectClass": "TrainingDoll",
-							"sid": 739007079269001,
+							"sid": 389648024703468,
 							"parameters": {
-								"scale": "1.1"
+								"scale": "1.2"
 							}
 						}
 					],
