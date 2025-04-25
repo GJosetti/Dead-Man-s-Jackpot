@@ -207,11 +207,11 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 356750751420588,
+							"sid": 661792736838071,
 							"parameters": {
 								"variable": "Energy",
 								"comparison": 5,
-								"value": "3"
+								"value": "1"
 							}
 						}
 					],
@@ -250,11 +250,11 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 801542608223144,
+							"sid": 423892253245389,
 							"parameters": {
 								"variable": "Energy",
 								"comparison": 5,
-								"value": "3"
+								"value": "1"
 							}
 						}
 					],
@@ -288,18 +288,60 @@
 								"variable": "Power",
 								"value": "0"
 							}
-						},
-						{
-							"id": "subtract-from-eventvar",
-							"objectClass": "System",
-							"sid": 932460491563200,
-							"parameters": {
-								"variable": "Energy",
-								"value": "3"
-							}
 						}
 					],
-					"sid": 758478998581489
+					"sid": 758478998581489,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 270136260654736,
+									"parameters": {
+										"variable": "Power",
+										"comparison": 3,
+										"value": "10"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 976078685643832,
+									"parameters": {
+										"variable": "Energy",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 924679483311775
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 896976153066052
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 909471759607183,
+									"parameters": {
+										"variable": "Energy",
+										"value": "2"
+									}
+								}
+							],
+							"sid": 118401789636851
+						}
+					]
 				},
 				{
 					"eventType": "block",
@@ -348,6 +390,33 @@
 						}
 					],
 					"sid": 911461154877092
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 225421321866197,
+							"parameters": {
+								"variable": "Energy",
+								"comparison": 4,
+								"value": "7"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 759963056025714,
+							"parameters": {
+								"variable": "Energy",
+								"value": "7"
+							}
+						}
+					],
+					"sid": 942292184635576
 				},
 				{
 					"eventType": "block",
@@ -625,9 +694,9 @@
 						{
 							"id": "key-is-down",
 							"objectClass": "Teclado",
-							"sid": 731671480227586,
+							"sid": 822132574398603,
 							"parameters": {
-								"key": 32
+								"key": 87
 							}
 						}
 					],
