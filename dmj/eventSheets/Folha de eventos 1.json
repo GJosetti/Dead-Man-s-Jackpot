@@ -680,6 +680,79 @@
 						}
 					],
 					"sid": 997050887707957
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 613547732496164,
+							"parameters": {
+								"variable": "Vida",
+								"comparison": 3,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Player",
+							"sid": 138581213322385
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 897943221715485,
+							"parameters": {
+								"seconds": "1.0",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 224954888834978
+						},
+						{
+							"id": "reset-eventvar",
+							"objectClass": "System",
+							"sid": 359034297494112,
+							"parameters": {
+								"variable": "Vida"
+							}
+						}
+					],
+					"sid": 503760053860964
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Tiro",
+							"sid": 758227004896637,
+							"parameters": {
+								"object": "TrainingDoll"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 427734911224518,
+							"parameters": {
+								"audio-file": "EnemyHurt",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 174450173648566
 				}
 			],
 			"sid": 529482182383508
@@ -783,6 +856,18 @@
 							],
 							"actions": [
 								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 142743003308328,
+									"parameters": {
+										"audio-file": "PlayerParry",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
 									"id": "set-time-scale",
 									"objectClass": "System",
 									"sid": 259236689349202,
@@ -837,9 +922,56 @@
 										"variable": "Vida",
 										"value": "1"
 									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 371039704911873,
+									"parameters": {
+										"audio-file": "PlayerHurt",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
 								}
 							],
 							"sid": 877997838223869
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 689715598267428
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 108030354856130,
+									"parameters": {
+										"variable": "Vida",
+										"comparison": 3,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 230953472699251,
+									"parameters": {
+										"audio-file": "PlayerDeath",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 759308031533433
 						}
 					]
 				},
@@ -947,6 +1079,40 @@
 				}
 			],
 			"sid": 972829669997288
+		},
+		{
+			"eventType": "comment",
+			"text": "Para ser usado nos menus apenas, não no layout do jogo"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 809530442035888,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 499521286855163,
+					"parameters": {
+						"audio-file": "MouseClick",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 592348801349715,
+			"disabled": true
 		}
 	],
 	"sid": 558634085357818
