@@ -117,7 +117,8 @@
 				"items": [
 					"Player",
 					"Tiro",
-					"Camera"
+					"Camera",
+					"player_col"
 				],
 				"subfolders": [],
 				"name": "Player"

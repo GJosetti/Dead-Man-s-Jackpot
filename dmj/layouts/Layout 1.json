@@ -1608,12 +1608,12 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1747.3582194317967,
-						"y": 44.83678495208622,
+						"x": 532.7682192873103,
+						"y": 131.2258855059071,
 						"width": 30.370497624269284,
 						"height": 37.808170511845425,
-						"originX": 0.4489795918367347,
-						"originY": 0.6065573770491803,
+						"originX": 0.45918367346938777,
+						"originY": 0.6147540983606558,
 						"color": [
 							1,
 							1,
@@ -2443,6 +2443,61 @@
 						"y": 34.36237440287964,
 						"width": 182.03085785389203,
 						"height": 75.66198796033785,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "player_col",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 127,
+					"sid": 654753444455512,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Plataforma": {
+							"properties": {
+								"max-speed": 330,
+								"acceleration": 1500,
+								"deceleration": 1500,
+								"jump-strength": 650,
+								"gravity": 1500,
+								"max-fall-speed": 1000,
+								"double-jump": false,
+								"jump-sustain": 0,
+								"default-controls": true,
+								"enabled": true
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 654753444455512,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 532.4433290266911,
+						"y": 127.64842611096027,
+						"width": 16.794834677856215,
+						"height": 30.429574077954626,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

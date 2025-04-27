@@ -568,6 +568,15 @@
 							}
 						},
 						{
+							"id": "set-animation",
+							"objectClass": "Player",
+							"sid": 417388211003967,
+							"parameters": {
+								"animation": "\"Parry\"",
+								"from": "beginning"
+							}
+						},
+						{
 							"id": "set-boolean-eventvar",
 							"objectClass": "System",
 							"sid": 420023922058934,
@@ -671,16 +680,7 @@
 							}
 						}
 					],
-					"actions": [
-						{
-							"id": "set-default-color",
-							"objectClass": "Player",
-							"sid": 730369865051401,
-							"parameters": {
-								"color": "rgbEx(0, 0, 400)"
-							}
-						}
-					],
+					"actions": [],
 					"sid": 512571940986016
 				},
 				{
@@ -909,6 +909,50 @@
 						}
 					],
 					"sid": 629747879252580
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-animation-finished",
+							"objectClass": "Player",
+							"sid": 838244364735199,
+							"parameters": {
+								"animation": "\"Parry\""
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 826238220587213,
+							"parameters": {
+								"variable": "IsParrying"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 681978897236788,
+							"parameters": {
+								"variable": "Power",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Player",
+							"sid": 708837579382697,
+							"parameters": {
+								"animation": "\"Idle\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 503095232967137
 				}
 			],
 			"sid": 529482182383508
@@ -1021,6 +1065,14 @@
 										"volume": "-20",
 										"stereo-pan": "0",
 										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Player",
+									"sid": 699571926433661,
+									"parameters": {
+										"frame-number": "4"
 									}
 								},
 								{
