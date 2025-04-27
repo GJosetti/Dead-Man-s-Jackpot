@@ -71,6 +71,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Tween",
+			"name": "Interpolação",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "scrollto",
 			"name": "Centrar em",
 			"author": "Scirra",
@@ -101,7 +108,10 @@
 	],
 	"uniqueId": "781yszjylkn",
 	"objectTypes": {
-		"items": [],
+		"items": [
+			"Fade_col",
+			"Fade"
+		],
 		"subfolders": [
 			{
 				"items": [
@@ -154,7 +164,8 @@
 					"Arma_teste",
 					"TrainingDoll",
 					"Tiro_parry",
-					"DeadVidaInimigo"
+					"DeadVidaInimigo",
+					"DeadBossJackPot"
 				],
 				"subfolders": [],
 				"name": "Inimigos"
@@ -183,7 +194,9 @@
 	},
 	"layouts": {
 		"items": [
-			"Layout 1"
+			"Layout 1",
+			"Layout 2",
+			"Layout 3"
 		],
 		"subfolders": []
 	},

@@ -168,6 +168,23 @@
 			],
 			"actions": [
 				{
+					"id": "tween-one-property",
+					"objectClass": "Fade",
+					"sid": 135654196265482,
+					"behaviorType": "Interpolação",
+					"parameters": {
+						"tags": "\"fade in\"",
+						"property": "offsetOpacity",
+						"end-value": "0",
+						"time": "1",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
 					"id": "set-mirrored",
 					"objectClass": "Arma_teste",
 					"sid": 952770879634832,
@@ -1309,6 +1326,65 @@
 			],
 			"sid": 592348801349715,
 			"disabled": true
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "SlotReaper",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [],
+			"sid": 873094785867251
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Fade_col",
+					"sid": 589789379219467,
+					"parameters": {
+						"object": "Player"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-one-property",
+					"objectClass": "Fade",
+					"sid": 459823802627113,
+					"behaviorType": "Interpolação",
+					"parameters": {
+						"tags": "\"FadeOut\"",
+						"property": "offsetOpacity",
+						"end-value": "100",
+						"time": "1",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 195177468870737,
+					"parameters": {
+						"seconds": "1.0",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "go-to-nextprevious-layout",
+					"objectClass": "System",
+					"sid": 200096833291085,
+					"parameters": {
+						"which": "next"
+					}
+				}
+			],
+			"sid": 332861134028481
 		}
 	],
 	"sid": 558634085357818
