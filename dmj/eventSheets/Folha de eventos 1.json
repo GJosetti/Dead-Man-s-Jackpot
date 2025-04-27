@@ -72,27 +72,20 @@
 			],
 			"actions": [
 				{
-					"id": "set-text",
-					"objectClass": "Vida",
-					"sid": 188496237075275,
-					"parameters": {
-						"text": "\"Life: \" & Vida"
-					}
-				},
-				{
-					"id": "set-text",
-					"objectClass": "Energy",
-					"sid": 703064159754081,
-					"parameters": {
-						"text": "\"Energy: \" & Energy"
-					}
-				},
-				{
 					"id": "set-animation",
 					"objectClass": "DeadHP",
 					"sid": 287833731340997,
 					"parameters": {
 						"animation": "\"Vida \" & Vida",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "DeadEnergia",
+					"sid": 527757128696741,
+					"parameters": {
+						"animation": "\"Animação \" & Energy",
 						"from": "beginning"
 					}
 				}
@@ -890,11 +883,11 @@
 								{
 									"id": "play",
 									"objectClass": "Audio",
-									"sid": 555297048235785,
+									"sid": 634142428062125,
 									"parameters": {
 										"audio-file": "PlayerParry",
 										"loop": "not-looping",
-										"volume": "-10",
+										"volume": "-20",
 										"stereo-pan": "0",
 										"tag-optional": "\"\""
 									}
@@ -910,10 +903,10 @@
 								{
 									"id": "add-to-eventvar",
 									"objectClass": "System",
-									"sid": 367157350056037,
+									"sid": 688302611178502,
 									"parameters": {
 										"variable": "Energy",
-										"value": "3"
+										"value": "1"
 									}
 								},
 								{
@@ -1075,11 +1068,11 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 430011020449369,
+							"sid": 380313162798994,
 							"parameters": {
 								"audio-file": "EnemyHurt",
 								"loop": "not-looping",
-								"volume": "-10",
+								"volume": "-20",
 								"stereo-pan": "0",
 								"tag-optional": "\"\""
 							}

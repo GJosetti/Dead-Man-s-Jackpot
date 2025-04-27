@@ -102,17 +102,16 @@
 	"uniqueId": "781yszjylkn",
 	"objectTypes": {
 		"items": [
-			"EfeitoCrt",
-			"Colisão",
-			"Camera",
-			"Audio",
-			"DeadHP"
+			"DeadBackLayer",
+			"DeadBackLayer2",
+			"DeadBackLayer3"
 		],
 		"subfolders": [
 			{
 				"items": [
 					"Player",
-					"Tiro"
+					"Tiro",
+					"Camera"
 				],
 				"subfolders": [],
 				"name": "Player"
@@ -120,22 +119,26 @@
 			{
 				"items": [
 					"Mouse",
-					"Teclado"
+					"Teclado",
+					"Audio"
 				],
 				"subfolders": [],
 				"name": "Inputs"
 			},
 			{
 				"items": [
-					"Vida",
-					"Energy"
+					"DeadEnergia",
+					"DeadHP",
+					"DeadWarning",
+					"EfeitoCrt"
 				],
 				"subfolders": [],
 				"name": "UI"
 			},
 			{
 				"items": [
-					"Mosaico"
+					"Mosaico",
+					"Colisão"
 				],
 				"subfolders": [],
 				"name": "Tiles"
@@ -155,6 +158,13 @@
 				],
 				"subfolders": [],
 				"name": "Inimigos"
+			},
+			{
+				"items": [
+					"TransicaoFundo"
+				],
+				"subfolders": [],
+				"name": "BG"
 			}
 		]
 	},
