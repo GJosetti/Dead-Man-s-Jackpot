@@ -1,0 +1,102 @@
+{
+	"name": "DeadHP",
+	"plugin-id": "Sprite",
+	"sid": 688655814785979,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 86,
+						"height": 43,
+						"originX": 0.5,
+						"originY": 0.46511627906976744,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 337067,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 431309733309572,
+				"name": "Vida 3",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 86,
+						"height": 43,
+						"originX": 0.5,
+						"originY": 0.46511627906976744,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 4420201,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 281386553329888,
+				"name": "Vida 2",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 86,
+						"height": 43,
+						"originX": 0.5,
+						"originY": 0.46511627906976744,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9255594,
+						"collisionPoly": {
+							"points": [
+								0.20930232558139536,
+								0.09302325581395349,
+								0.5348837209302326,
+								0.09302325581395349,
+								0.5348837209302326,
+								1,
+								0.20930232558139536,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 879001556261580,
+				"name": "Vida 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

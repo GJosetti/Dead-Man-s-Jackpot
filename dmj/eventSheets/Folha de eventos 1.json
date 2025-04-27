@@ -45,7 +45,7 @@
 			"eventType": "variable",
 			"name": "Vida",
 			"type": "number",
-			"initialValue": "100",
+			"initialValue": "3",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -85,6 +85,15 @@
 					"sid": 703064159754081,
 					"parameters": {
 						"text": "\"Energy: \" & Energy"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "DeadHP",
+					"sid": 287833731340997,
+					"parameters": {
+						"animation": "\"Vida \" & Vida",
+						"from": "beginning"
 					}
 				}
 			],
@@ -881,11 +890,11 @@
 								{
 									"id": "play",
 									"objectClass": "Audio",
-									"sid": 142743003308328,
+									"sid": 555297048235785,
 									"parameters": {
 										"audio-file": "PlayerParry",
 										"loop": "not-looping",
-										"volume": "0",
+										"volume": "-10",
 										"stereo-pan": "0",
 										"tag-optional": "\"\""
 									}
@@ -1066,11 +1075,11 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 979054979029415,
+							"sid": 430011020449369,
 							"parameters": {
 								"audio-file": "EnemyHurt",
 								"loop": "not-looping",
-								"volume": "0",
+								"volume": "-10",
 								"stereo-pan": "0",
 								"tag-optional": "\"\""
 							}
