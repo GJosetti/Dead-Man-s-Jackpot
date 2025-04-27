@@ -88,6 +88,14 @@
 						"animation": "\"Animação \" & Energy",
 						"from": "beginning"
 					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "DeadVidaInimigo",
+					"sid": 986159932382078,
+					"parameters": {
+						"frame-number": "TrainingDoll.Vida"
+					}
 				}
 			],
 			"sid": 131136718263754
@@ -176,6 +184,15 @@
 					"id": "destroy",
 					"objectClass": "Tiro_parry",
 					"sid": 444609640346046
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "DeadMouse1",
+					"sid": 933461235816768,
+					"parameters": {
+						"animation": "\"Default\"",
+						"from": "beginning"
+					}
 				}
 			],
 			"sid": 575381494356524
@@ -234,6 +251,50 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "on-click",
+							"objectClass": "Mouse",
+							"sid": 986266329286383,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 544725115266036,
+							"parameters": {
+								"variable": "CanAttack"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 746472568358517,
+							"parameters": {
+								"variable": "Energy",
+								"comparison": 5,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Player",
+							"sid": 445978838790167,
+							"parameters": {
+								"animation": "\"Shoot_Start\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 801125669335433
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "on-button-released",
 							"objectClass": "Mouse",
 							"sid": 602881480153098,
@@ -273,13 +334,22 @@
 						{
 							"id": "spawn-another-object",
 							"objectClass": "Player",
-							"sid": 804944976629026,
+							"sid": 472604400233957,
 							"parameters": {
 								"object": "Tiro",
-								"layer": "0",
+								"layer": "7",
 								"image-point": "0",
 								"create-hierarchy": false,
 								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Player",
+							"sid": 493994094788711,
+							"parameters": {
+								"animation": "\"Shoot_End\"",
+								"from": "beginning"
 							}
 						}
 					],
@@ -778,6 +848,50 @@
 						}
 					],
 					"sid": 503760053860964
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-animation-finished",
+							"objectClass": "Player",
+							"sid": 433218401822567,
+							"parameters": {
+								"animation": "\"Shoot_End\""
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 806875268742790,
+							"parameters": {
+								"variable": "IsParrying"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 526247985447945,
+							"parameters": {
+								"variable": "Power",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Player",
+							"sid": 730843523227110,
+							"parameters": {
+								"animation": "\"Idle\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 629747879252580
 				}
 			],
 			"sid": 529482182383508
@@ -805,10 +919,10 @@
 						{
 							"id": "spawn-another-object",
 							"objectClass": "Arma_teste",
-							"sid": 863365645052257,
+							"sid": 386187755289182,
 							"parameters": {
 								"object": "Tiro_parry",
-								"layer": "0",
+								"layer": "7",
 								"image-point": "1",
 								"create-hierarchy": false,
 								"template-name": "\"\""
@@ -1017,6 +1131,14 @@
 							"parameters": {
 								"angle": "180"
 							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Tiro_parry",
+							"sid": 491235088800219,
+							"parameters": {
+								"visibility": "visible"
+							}
 						}
 					],
 					"sid": 646879903946266
@@ -1089,9 +1211,46 @@
 							"parameters": {
 								"scale": "1.2"
 							}
+						},
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "TrainingDoll",
+							"sid": 607598764138116,
+							"parameters": {
+								"instance-variable": "Vida",
+								"value": "1"
+							}
 						}
 					],
 					"sid": 888002763739536
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "TrainingDoll",
+							"sid": 243932577928976,
+							"parameters": {
+								"instance-variable": "Vida",
+								"comparison": 3,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "DeadVidaInimigo",
+							"sid": 145529697453914
+						},
+						{
+							"id": "destroy",
+							"objectClass": "TrainingDoll",
+							"sid": 156715919219879
+						}
+					],
+					"sid": 492512019167561
 				}
 			],
 			"sid": 677618579755281

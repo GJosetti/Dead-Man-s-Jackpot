@@ -4,7 +4,15 @@
 	"sid": 465397763926151,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "Vida",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 657650566036671
+		}
+	],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {

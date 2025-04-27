@@ -1,0 +1,100 @@
+{
+	"name": "DeadWASD",
+	"plugin-id": "Sprite",
+	"sid": 106236783961033,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 46,
+						"height": 32,
+						"originX": 1.326086956521739,
+						"originY": 1.8125,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5211564,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 46,
+						"height": 34,
+						"originX": 1.326086956521739,
+						"originY": 1.7647058823529411,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3650896,
+						"collisionPoly": {
+							"points": [
+								0.391304347826087,
+								0.029411764705882353,
+								0.6086956521739132,
+								0.029411764705882353,
+								0.9782608695652174,
+								0.5588235294117647,
+								0.9347826086956522,
+								0.9705882352941176,
+								0.021739130434782608,
+								0.9117647058823529,
+								0.021739130434782608,
+								0.5294117647058824
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 46,
+						"height": 34,
+						"originX": 1.326086956521739,
+						"originY": 1.7647058823529411,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 2861971,
+						"collisionPoly": {
+							"points": [
+								0.391304347826087,
+								0.029411764705882353,
+								0.6086956521739132,
+								0.029411764705882353,
+								0.9782608695652174,
+								0.5294117647058824,
+								0.9347826086956522,
+								0.9705882352941176,
+								0.021739130434782608,
+								0.9117647058823529,
+								0.021739130434782608,
+								0.5588235294117647
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 903620537497024,
+				"name": "Default",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 3
+			}
+		],
+		"subfolders": []
+	}
+}

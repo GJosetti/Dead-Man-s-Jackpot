@@ -101,11 +101,7 @@
 	],
 	"uniqueId": "781yszjylkn",
 	"objectTypes": {
-		"items": [
-			"DeadBackLayer",
-			"DeadBackLayer2",
-			"DeadBackLayer3"
-		],
+		"items": [],
 		"subfolders": [
 			{
 				"items": [
@@ -145,7 +141,10 @@
 			},
 			{
 				"items": [
-					"txt_1"
+					"txt_1",
+					"DeadMouse1",
+					"DeadMouse2",
+					"DeadWASD"
 				],
 				"subfolders": [],
 				"name": "Tutorial"
@@ -154,14 +153,20 @@
 				"items": [
 					"Arma_teste",
 					"TrainingDoll",
-					"Tiro_parry"
+					"Tiro_parry",
+					"DeadVidaInimigo"
 				],
 				"subfolders": [],
 				"name": "Inimigos"
 			},
 			{
 				"items": [
-					"TransicaoFundo"
+					"TransicaoFundo",
+					"DeadBackLayer1",
+					"DeadBackLayer2",
+					"DeadBackLayer3",
+					"DeadBackLayer4",
+					"DeadBackLayer5"
 				],
 				"subfolders": [],
 				"name": "BG"

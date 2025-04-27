@@ -1,0 +1,74 @@
+{
+	"name": "DeadMouse1",
+	"plugin-id": "Sprite",
+	"sid": 528781466791342,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 36,
+						"height": 45,
+						"originX": 0.4722222222222222,
+						"originY": 0.4444444444444444,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9978411,
+						"collisionPoly": {
+							"points": [
+								0.4166666666666667,
+								0.022222222222222223,
+								0.9166666666666666,
+								0.2222222222222222,
+								0.9722222222222222,
+								0.35555555555555557,
+								0.9444444444444444,
+								0.7777777777777778,
+								0.6388888888888888,
+								0.9777777777777777,
+								0.2777777777777778,
+								0.9555555555555556,
+								0.027777777777777384,
+								0.7333333333333333,
+								0.027777777777777384,
+								0.35555555555555557
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 36,
+						"height": 45,
+						"originX": 0.4722222222222222,
+						"originY": 0.4666666666666667,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8757000,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 858219911282376,
+				"name": "Default",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 3
+			}
+		],
+		"subfolders": []
+	}
+}
