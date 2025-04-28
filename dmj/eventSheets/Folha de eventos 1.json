@@ -539,6 +539,18 @@
 									}
 								},
 								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 449143754762003,
+									"parameters": {
+										"audio-file": "PlayerShoot",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
 									"id": "spawn-another-object",
 									"objectClass": "Player",
 									"sid": 312937174706058,
@@ -2535,7 +2547,17 @@
 					}
 				}
 			],
-			"actions": [],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 962609287543041,
+					"parameters": {
+						"variable": "Energy",
+						"value": "0"
+					}
+				}
+			],
 			"sid": 460639128322231,
 			"children": [
 				{
@@ -2551,6 +2573,18 @@
 						}
 					],
 					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 931375364779229,
+							"parameters": {
+								"audio-file": "MouseClick",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
 						{
 							"id": "tween-one-property",
 							"objectClass": "Fade",
