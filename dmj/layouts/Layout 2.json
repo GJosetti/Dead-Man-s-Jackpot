@@ -983,7 +983,7 @@
 				{
 					"type": "Player",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Idle",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1650,6 +1650,57 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "Player_Anim",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Idle",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 127,
+					"sid": 679174447650655,
+					"tags": "",
+					"instanceVariables": {
+						"onGround": false
+					},
+					"behaviors": {
+						"Fixar": {
+							"properties": {
+								"destroy": false
+							}
+						},
+						"Piscar": {
+							"properties": {}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 679174447650655,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 203,
+						"y": -194,
+						"width": 31.459844247782407,
+						"height": 39.164295900300544,
+						"originX": 0.45918367346938777,
+						"originY": 0.6147540983606558,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 636562141491424,
@@ -1815,10 +1866,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 31.646247441682874,
-						"y": 17.83529898445545,
-						"width": 42.42357355681202,
-						"height": 21.21178677840601,
+						"x": 39.50254984250685,
+						"y": 17.695003512355015,
+						"width": 62.286511,
+						"height": 31.143256,
 						"originX": 0.5,
 						"originY": 0.46511627906976744,
 						"color": [
@@ -1899,7 +1950,7 @@
 						"folderNestingLevel": -1
 					},
 					"showing": false,
-					"locked": false,
+					"locked": true,
 					"world": {
 						"x": 1116.8747411575985,
 						"y": 138.0464280660462,

@@ -12,6 +12,7 @@
 		"Arma_teste",
 		"Tiro_parry",
 		"Tiro",
-		"Camera"
+		"Camera",
+		"Player_Anim"
 	]
 }

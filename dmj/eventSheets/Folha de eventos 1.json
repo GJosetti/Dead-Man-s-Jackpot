@@ -62,6 +62,16 @@
 			"sid": 970074586934974
 		},
 		{
+			"eventType": "variable",
+			"name": "IsInvencible",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 653957624951656
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -210,6 +220,20 @@
 						"animation": "\"Default\"",
 						"from": "beginning"
 					}
+				},
+				{
+					"id": "pin-to-object-imagepoint",
+					"objectClass": "Player_Anim",
+					"sid": 587685056895914,
+					"behaviorType": "Fixar",
+					"parameters": {
+						"pin-to": "Player",
+						"image-point": "0",
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
 				}
 			],
 			"sid": 575381494356524
@@ -298,7 +322,7 @@
 					"actions": [
 						{
 							"id": "set-animation",
-							"objectClass": "Player",
+							"objectClass": "Player_Anim",
 							"sid": 445978838790167,
 							"parameters": {
 								"animation": "\"Shoot_Start\"",
@@ -362,7 +386,7 @@
 						},
 						{
 							"id": "set-animation",
-							"objectClass": "Player",
+							"objectClass": "Player_Anim",
 							"sid": 493994094788711,
 							"parameters": {
 								"animation": "\"Shoot_End\"",
@@ -569,7 +593,7 @@
 						},
 						{
 							"id": "set-animation",
-							"objectClass": "Player",
+							"objectClass": "Player_Anim",
 							"sid": 417388211003967,
 							"parameters": {
 								"animation": "\"Parry\"",
@@ -659,7 +683,7 @@
 					"actions": [
 						{
 							"id": "set-default-color",
-							"objectClass": "Player",
+							"objectClass": "Player_Anim",
 							"sid": 564183129918803,
 							"parameters": {
 								"color": "rgbEx(100, 100,100)"
@@ -700,7 +724,7 @@
 					"actions": [
 						{
 							"id": "set-default-color",
-							"objectClass": "Player",
+							"objectClass": "Player_Anim",
 							"sid": 787676293009034,
 							"parameters": {
 								"color": "rgbEx(Power *20, 0, 0)"
@@ -754,7 +778,7 @@
 						},
 						{
 							"id": "set-mirrored",
-							"objectClass": "Player",
+							"objectClass": "Player_Anim",
 							"sid": 968083232743540,
 							"parameters": {
 								"state": "not-mirrored"
@@ -787,7 +811,7 @@
 						},
 						{
 							"id": "set-mirrored",
-							"objectClass": "Player",
+							"objectClass": "Player_Anim",
 							"sid": 911297597126054,
 							"parameters": {
 								"state": "mirrored"
@@ -871,7 +895,7 @@
 					"conditions": [
 						{
 							"id": "on-animation-finished",
-							"objectClass": "Player",
+							"objectClass": "Player_Anim",
 							"sid": 433218401822567,
 							"parameters": {
 								"animation": "\"Shoot_End\""
@@ -900,7 +924,7 @@
 					"actions": [
 						{
 							"id": "set-animation",
-							"objectClass": "Player",
+							"objectClass": "Player_Anim",
 							"sid": 730843523227110,
 							"parameters": {
 								"animation": "\"Idle\"",
@@ -915,7 +939,7 @@
 					"conditions": [
 						{
 							"id": "on-animation-finished",
-							"objectClass": "Player",
+							"objectClass": "Player_Anim",
 							"sid": 838244364735199,
 							"parameters": {
 								"animation": "\"Parry\""
@@ -944,7 +968,7 @@
 					"actions": [
 						{
 							"id": "set-animation",
-							"objectClass": "Player",
+							"objectClass": "Player_Anim",
 							"sid": 708837579382697,
 							"parameters": {
 								"animation": "\"Idle\"",
@@ -1069,7 +1093,7 @@
 								},
 								{
 									"id": "set-animation-frame",
-									"objectClass": "Player",
+									"objectClass": "Player_Anim",
 									"sid": 699571926433661,
 									"parameters": {
 										"frame-number": "4"
@@ -1118,33 +1142,37 @@
 								{
 									"id": "else",
 									"objectClass": "System",
-									"sid": 551244430631654
+									"sid": 973143115615513
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 710604811219189,
+									"parameters": {
+										"variable": "IsInvencible"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [
 								{
-									"id": "subtract-from-eventvar",
-									"objectClass": "System",
-									"sid": 164874312889600,
-									"parameters": {
-										"variable": "Vida",
-										"value": "1"
-									}
-								},
-								{
-									"id": "play",
-									"objectClass": "Audio",
-									"sid": 371039704911873,
-									"parameters": {
-										"audio-file": "PlayerHurt",
-										"loop": "not-looping",
-										"volume": "0",
-										"stereo-pan": "0",
-										"tag-optional": "\"\""
-									}
+									"callFunction": "TakeDamage",
+									"sid": 884377223106665
 								}
 							],
 							"sid": 877997838223869
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 111923951036859
+								}
+							],
+							"actions": [],
+							"sid": 548351909773191
 						},
 						{
 							"eventType": "block",
@@ -1437,6 +1465,79 @@
 				}
 			],
 			"sid": 332861134028481
+		},
+		{
+			"functionName": "TakeDamage",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 256922750981411,
+					"parameters": {
+						"variable": "Vida",
+						"value": "1"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 509459928427761,
+					"parameters": {
+						"audio-file": "PlayerHurt",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "flash",
+					"objectClass": "Player_Anim",
+					"sid": 823800807644358,
+					"behaviorType": "Piscar",
+					"parameters": {
+						"on-time": "0.1",
+						"off-time": "0.1",
+						"duration": "1.0"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 773578918695243,
+					"parameters": {
+						"variable": "IsInvencible",
+						"value": "true"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 405861552815986,
+					"parameters": {
+						"seconds": "1",
+						"use-timescale": false
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 870846773541107,
+					"parameters": {
+						"variable": "IsInvencible",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 634559444501006
 		}
 	],
 	"sid": 558634085357818

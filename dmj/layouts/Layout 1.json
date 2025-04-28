@@ -1570,7 +1570,7 @@
 				{
 					"type": "Player",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Idle",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1608,8 +1608,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 532.7682192873103,
-						"y": 131.2258855059071,
+						"x": 164.11055446590194,
+						"y": 169.46239302813382,
 						"width": 30.370497624269284,
 						"height": 37.808170511845425,
 						"originX": 0.45918367346938777,
@@ -2456,36 +2456,32 @@
 					}
 				},
 				{
-					"type": "player_col",
+					"type": "Player_Anim",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Idle",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 127,
-					"sid": 654753444455512,
+					"uid": 126,
+					"sid": 182037986709476,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"onGround": false
+					},
 					"behaviors": {
-						"Plataforma": {
+						"Fixar": {
 							"properties": {
-								"max-speed": 330,
-								"acceleration": 1500,
-								"deceleration": 1500,
-								"jump-strength": 650,
-								"gravity": 1500,
-								"max-fall-speed": 1000,
-								"double-jump": false,
-								"jump-sustain": 0,
-								"default-controls": true,
-								"enabled": true
+								"destroy": false
 							}
+						},
+						"Piscar": {
+							"properties": {}
 						}
 					},
 					"instanceFolderItem": {
-						"sid": 654753444455512,
+						"sid": 182037986709476,
 						"expanded": true,
 						"folderName": "",
 						"indexInFolder": -1,
@@ -2494,12 +2490,12 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 532.4433290266911,
-						"y": 127.64842611096027,
-						"width": 16.794834677856215,
-						"height": 30.429574077954626,
-						"originX": 0.5,
-						"originY": 0.5,
+						"x": 109.7093257212799,
+						"y": 175.4539027489556,
+						"width": 31.459844247782403,
+						"height": 39.164295900300544,
+						"originX": 0.45918367346938777,
+						"originY": 0.6147540983606558,
 						"color": [
 							1,
 							1,
@@ -2674,10 +2670,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 31.646247441682874,
-						"y": 17.83529898445545,
-						"width": 42.42357355681202,
-						"height": 21.21178677840601,
+						"x": 43.039399695056346,
+						"y": 18.25321455555293,
+						"width": 62.28651126676926,
+						"height": 31.14325563338463,
 						"originX": 0.5,
 						"originY": 0.46511627906976744,
 						"color": [
@@ -2758,7 +2754,7 @@
 						"folderNestingLevel": -1
 					},
 					"showing": false,
-					"locked": false,
+					"locked": true,
 					"world": {
 						"x": 1109,
 						"y": 144,

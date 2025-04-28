@@ -57,6 +57,20 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Flash",
+			"name": "Piscar",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Pin",
+			"name": "Fixar",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Platform",
 			"name": "Plataforma",
 			"author": "Scirra",
@@ -118,7 +132,7 @@
 					"Player",
 					"Tiro",
 					"Camera",
-					"player_col"
+					"Player_Anim"
 				],
 				"subfolders": [],
 				"name": "Player"

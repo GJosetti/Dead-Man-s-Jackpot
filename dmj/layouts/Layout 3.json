@@ -983,7 +983,7 @@
 				{
 					"type": "Player",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Idle",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1670,7 +1670,9 @@
 					"uid": 121,
 					"sid": 230807007646186,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Estado": "\"Idle\""
+					},
 					"behaviors": {},
 					"instanceFolderItem": {
 						"sid": 230807007646186,
@@ -1688,6 +1690,57 @@
 						"height": 126.31369700619368,
 						"originX": 0.5,
 						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Player_Anim",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Idle",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 128,
+					"sid": 185934282507185,
+					"tags": "",
+					"instanceVariables": {
+						"onGround": false
+					},
+					"behaviors": {
+						"Fixar": {
+							"properties": {
+								"destroy": false
+							}
+						},
+						"Piscar": {
+							"properties": {}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 185934282507185,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 430.5437316894531,
+						"y": 22.9129695892334,
+						"width": 31.459844247782407,
+						"height": 39.164295900300544,
+						"originX": 0.45918367346938777,
+						"originY": 0.6147540983606558,
 						"color": [
 							1,
 							1,
@@ -1862,10 +1915,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 31.646247441682874,
+						"x": 42.15170649018148,
 						"y": 17.83529898445545,
-						"width": 42.42357355681202,
-						"height": 21.21178677840601,
+						"width": 62.286511,
+						"height": 31.143256,
 						"originX": 0.5,
 						"originY": 0.46511627906976744,
 						"color": [
@@ -1946,7 +1999,7 @@
 						"folderNestingLevel": -1
 					},
 					"showing": false,
-					"locked": false,
+					"locked": true,
 					"world": {
 						"x": 550.4932250976562,
 						"y": 133.51025390625,
