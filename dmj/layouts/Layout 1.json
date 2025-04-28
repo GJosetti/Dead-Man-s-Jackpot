@@ -2630,7 +2630,7 @@
 						"folderNestingLevel": -1
 					},
 					"showing": true,
-					"locked": true,
+					"locked": false,
 					"world": {
 						"x": 1048,
 						"y": 36,

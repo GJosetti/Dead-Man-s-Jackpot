@@ -2531,7 +2531,7 @@
 				{
 					"id": "compare-two-values",
 					"objectClass": "System",
-					"sid": 846867937915537,
+					"sid": 748293227480871,
 					"parameters": {
 						"first-value": "LayoutName",
 						"comparison": 0,
@@ -2615,6 +2615,244 @@
 					"sid": 767789637922295
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 222396370323542
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 786771600723719,
+					"parameters": {
+						"first-value": "LayoutName",
+						"comparison": 0,
+						"second-value": "\"Cutscene_1\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 644941547476632,
+					"parameters": {
+						"variable": "Energy",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 719645604047092,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "cutscene",
+							"sid": 220279352331871,
+							"parameters": {
+								"instance-variable": "Parou"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 830609359239730,
+							"parameters": {
+								"seconds": "2",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "tween-two-properties",
+							"objectClass": "cutscene",
+							"sid": 808153975916146,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "position",
+								"end-x": "Gambiarra_cutscene.x",
+								"end-y": "Gambiarra_cutscene.y",
+								"time": "5",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 904064375388057,
+							"parameters": {
+								"seconds": "5",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "cutscene",
+							"sid": 436720436526525,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "offsetZElevation",
+								"end-value": "30",
+								"time": "2",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 408945087608175,
+							"parameters": {
+								"seconds": "1.0",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "Fade",
+							"sid": 909979335046423,
+							"behaviorType": "Interpolação",
+							"parameters": {
+								"tags": "\"FadeOut\"",
+								"property": "offsetOpacity",
+								"end-value": "100",
+								"time": "1",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 366698447565080,
+							"parameters": {
+								"seconds": "1.0",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "go-to-nextprevious-layout",
+							"objectClass": "System",
+							"sid": 739931554293538,
+							"parameters": {
+								"which": "next"
+							}
+						}
+					],
+					"sid": 545142731658197
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "cutscene",
+					"sid": 346095358746893,
+					"parameters": {
+						"object": "Gambiarra_cutscene"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "cutscene",
+					"sid": 361846982650415,
+					"parameters": {
+						"instance-variable": "Parou",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 340826318388374
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 113774556759913
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 282647028043142,
+					"parameters": {
+						"first-value": "LayoutName",
+						"comparison": 0,
+						"second-value": "\"Cutscene_2\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 386987012146358,
+					"parameters": {
+						"seconds": "5",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "Fade",
+					"sid": 826832147002828,
+					"behaviorType": "Interpolação",
+					"parameters": {
+						"tags": "\"FadeOut\"",
+						"property": "offsetOpacity",
+						"end-value": "100",
+						"time": "1",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 747172541040911,
+					"parameters": {
+						"seconds": "1.0",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "go-to-nextprevious-layout",
+					"objectClass": "System",
+					"sid": 979846278683350,
+					"parameters": {
+						"which": "next"
+					}
+				}
+			],
+			"sid": 202179936538785
 		}
 	],
 	"sid": 558634085357818

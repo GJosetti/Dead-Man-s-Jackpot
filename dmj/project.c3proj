@@ -139,7 +139,10 @@
 		"items": [
 			"Texto",
 			"DeadMenuSubtitle",
-			"DeadMenuTitle"
+			"DeadMenuTitle",
+			"cutscene",
+			"Gambiarra_cutscene",
+			"final"
 		],
 		"subfolders": [
 			{
@@ -248,9 +251,11 @@
 	"layouts": {
 		"items": [
 			"Menu",
+			"Cutscene_1",
 			"Layout 1",
 			"Layout 2",
 			"Layout 3",
+			"Cutscene_2",
 			"The End"
 		],
 		"subfolders": []
