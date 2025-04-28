@@ -1735,7 +1735,9 @@
 					"uid": 14,
 					"sid": 792054761976041,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Shake": 0.2
+					},
 					"behaviors": {
 						"CentrarEm": {
 							"properties": {
@@ -2769,6 +2771,63 @@
 							1
 						],
 						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Juarez_morte_part",
+					"properties": {
+						"rate": 50,
+						"spray-cone": 40,
+						"type": "one-shot",
+						"object": -1,
+						"initially-visible": true,
+						"live-preview": false,
+						"speed": 150,
+						"size": 16,
+						"opacity": 100,
+						"grow-rate": 0,
+						"x-randomiser": 0,
+						"y-randomiser": 0,
+						"initial-speed-randomiser": 0,
+						"size-randomiser": 0,
+						"grow-rate-randomiser": 0,
+						"acceleration": -25,
+						"gravity": 300,
+						"angle-randomiser": 0,
+						"life-speed-randomiser": 800,
+						"opacity-randomiser": 0,
+						"destroy-mode": "timeout-expired",
+						"timeout": 2
+					},
+					"uid": 138,
+					"sid": 616092804933921,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 616092804933921,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 604.248878928289,
+						"y": 411.0962499417951,
+						"width": 100,
+						"height": 100,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 4.71238898038469,
 						"zElevation": 0
 					}
 				}

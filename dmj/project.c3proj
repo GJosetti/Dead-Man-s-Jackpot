@@ -29,6 +29,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Particles",
+			"name": "Partículas",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Sprite",
 			"name": "Sprite",
 			"author": "Scirra",
@@ -123,8 +130,7 @@
 	"uniqueId": "781yszjylkn",
 	"objectTypes": {
 		"items": [
-			"Fade_col",
-			"Fade"
+			"Texto"
 		],
 		"subfolders": [
 			{
@@ -151,7 +157,9 @@
 					"DeadEnergia",
 					"DeadHP",
 					"DeadWarning",
-					"EfeitoCrt"
+					"EfeitoCrt",
+					"Fade",
+					"Fade_col"
 				],
 				"subfolders": [],
 				"name": "UI"
@@ -200,6 +208,14 @@
 				],
 				"subfolders": [],
 				"name": "BG"
+			},
+			{
+				"items": [
+					"Slot_Reaper_death_part",
+					"Juarez_morte_part"
+				],
+				"subfolders": [],
+				"name": "Partículas"
 			}
 		]
 	},
@@ -213,9 +229,11 @@
 	},
 	"layouts": {
 		"items": [
+			"Menu",
 			"Layout 1",
 			"Layout 2",
-			"Layout 3"
+			"Layout 3",
+			"The End"
 		],
 		"subfolders": []
 	},

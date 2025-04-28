@@ -4,7 +4,15 @@
 	"sid": 403795610113094,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "Shake",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 642174682632132
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "scrollto",

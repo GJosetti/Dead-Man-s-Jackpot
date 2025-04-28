@@ -1,0 +1,29 @@
+{
+	"name": "Slot_Reaper_death_part",
+	"plugin-id": "Particles",
+	"sid": 814711122792899,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Fixar",
+			"sid": 696251908081880
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 25,
+		"height": 27,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 8207198,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

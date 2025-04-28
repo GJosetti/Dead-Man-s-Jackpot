@@ -1148,7 +1148,9 @@
 					"uid": 109,
 					"sid": 157832732765371,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Shake": 0.2
+					},
 					"behaviors": {
 						"CentrarEm": {
 							"properties": {
@@ -1675,7 +1677,7 @@
 						"isActing": false,
 						"canStop": false,
 						"choose": "\"\"",
-						"Vida": 12
+						"Vida": 1
 					},
 					"behaviors": {
 						"Fixar": {
@@ -1951,9 +1953,9 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 374.1673497999376,
+						"x": 202.86399534545774,
 						"y": 125.09161103616074,
-						"width": 48.31449503854401,
+						"width": 390.9212039475037,
 						"height": 261.04771670441136,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -1991,9 +1993,9 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 719.3030407844675,
+						"x": 872.7568687461599,
 						"y": 120.30165265979743,
-						"width": 48.31449503854401,
+						"width": 355.22215096192883,
 						"height": 261.04771670441136,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -2004,6 +2006,69 @@
 							1
 						],
 						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Slot_Reaper_death_part",
+					"properties": {
+						"rate": 40,
+						"spray-cone": 90,
+						"type": "continuous-spray",
+						"object": -1,
+						"initially-visible": true,
+						"live-preview": false,
+						"speed": 200,
+						"size": 16,
+						"opacity": 100,
+						"grow-rate": 0,
+						"x-randomiser": 0,
+						"y-randomiser": 0,
+						"initial-speed-randomiser": 0,
+						"size-randomiser": 0,
+						"grow-rate-randomiser": 0,
+						"acceleration": -150,
+						"gravity": 0,
+						"angle-randomiser": 0,
+						"life-speed-randomiser": 800,
+						"opacity-randomiser": 0,
+						"destroy-mode": "timeout-expired",
+						"timeout": 1
+					},
+					"uid": 134,
+					"sid": 464711163263285,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Fixar": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 464711163263285,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1089.2228775100932,
+						"y": 472.3097193620381,
+						"width": 171.57629782086883,
+						"height": 100,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 4.71238898038469,
 						"zElevation": 0
 					}
 				}
@@ -2129,7 +2194,7 @@
 						"folderNestingLevel": -1
 					},
 					"showing": true,
-					"locked": true,
+					"locked": false,
 					"world": {
 						"x": 1048,
 						"y": 36,
@@ -2255,7 +2320,7 @@
 						"folderNestingLevel": -1
 					},
 					"showing": false,
-					"locked": true,
+					"locked": false,
 					"world": {
 						"x": 550.4932250976562,
 						"y": 133.51025390625,

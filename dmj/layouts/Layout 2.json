@@ -1148,7 +1148,9 @@
 					"uid": 86,
 					"sid": 318382602797004,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Shake": 0.2
+					},
 					"behaviors": {
 						"CentrarEm": {
 							"properties": {
