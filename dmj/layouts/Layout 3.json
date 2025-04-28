@@ -1784,7 +1784,7 @@
 						"wrapping": "word",
 						"text-direction": "ltr",
 						"icon-set": -1,
-						"initially-visible": true,
+						"initially-visible": false,
 						"origin": "top-left",
 						"read-aloud": false
 					},
@@ -1828,7 +1828,7 @@
 				{
 					"type": "SlotReaper_col",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1932,7 +1932,7 @@
 				{
 					"type": "Trigger_Dash",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1972,7 +1972,7 @@
 				{
 					"type": "Trigger_Dash",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -2320,7 +2320,7 @@
 						"folderNestingLevel": -1
 					},
 					"showing": false,
-					"locked": false,
+					"locked": true,
 					"world": {
 						"x": 550.4932250976562,
 						"y": 133.51025390625,

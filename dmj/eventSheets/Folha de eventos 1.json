@@ -85,21 +85,11 @@
 			"eventType": "variable",
 			"name": "Vida_inimigo",
 			"type": "number",
-			"initialValue": "1",
+			"initialValue": "12",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 498837704262587
-		},
-		{
-			"eventType": "variable",
-			"name": "Menu",
-			"type": "boolean",
-			"initialValue": "true",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 453639231284508
 		},
 		{
 			"eventType": "block",
@@ -326,6 +316,15 @@
 					"id": "destroy",
 					"objectClass": "Slot_Reaper_death_part",
 					"sid": 717695175440007
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 927784873453012,
+					"parameters": {
+						"variable": "Energy",
+						"value": "2"
+					}
 				},
 				{
 					"id": "request-fullscreen",
@@ -2227,6 +2226,18 @@
 											"id": "destroy",
 											"objectClass": "Tiro",
 											"sid": 571578769370697
+										},
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 728843884135955,
+											"parameters": {
+												"audio-file": "EnemyHurt",
+												"loop": "not-looping",
+												"volume": "-20",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
 										}
 									],
 									"sid": 269988820405621
