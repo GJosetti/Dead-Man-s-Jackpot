@@ -9,14 +9,21 @@
 		{
 			"type": "plugin",
 			"id": "Audio",
-			"name": "Áudio",
+			"name": "Audio",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Browser",
+			"name": "Browser",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Keyboard",
-			"name": "Teclado",
+			"name": "Keyboard",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -30,7 +37,7 @@
 		{
 			"type": "plugin",
 			"id": "Particles",
-			"name": "Partículas",
+			"name": "Particles",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -44,84 +51,84 @@
 		{
 			"type": "plugin",
 			"id": "Text",
-			"name": "Texto",
+			"name": "Text",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Tilemap",
-			"name": "Mosaico",
+			"name": "Tilemap",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Bullet",
-			"name": "Projétil",
+			"name": "Bullet",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Flash",
-			"name": "Piscar",
+			"name": "Flash",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Pin",
-			"name": "Fixar",
+			"name": "Pin",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Platform",
-			"name": "Plataforma",
+			"name": "Platform",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Sin",
-			"name": "Senóide",
+			"name": "Sine",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Tween",
-			"name": "Interpolação",
+			"name": "Tween",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "scrollto",
-			"name": "Centrar em",
+			"name": "Scroll To",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "solid",
-			"name": "Sólido",
+			"name": "Solid",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "effect",
 			"id": "screen",
-			"name": "Tela",
+			"name": "Screen",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "effect",
 			"id": "skymen_BetterCRT",
-			"name": "[Better CRT]",
+			"name": "Better CRT",
 			"author": "skymen",
 			"bundled": false,
 			"version": "2.0.0.2"
@@ -130,7 +137,9 @@
 	"uniqueId": "781yszjylkn",
 	"objectTypes": {
 		"items": [
-			"Texto"
+			"Texto",
+			"DeadMenuSubtitle",
+			"DeadMenuTitle"
 		],
 		"subfolders": [
 			{
@@ -147,7 +156,8 @@
 				"items": [
 					"Mouse",
 					"Teclado",
-					"Audio"
+					"Audio",
+					"Browser"
 				],
 				"subfolders": [],
 				"name": "Inputs"
@@ -216,6 +226,14 @@
 				],
 				"subfolders": [],
 				"name": "Partículas"
+			},
+			{
+				"items": [
+					"DeadMenuBackground",
+					"DeadMenuPlay"
+				],
+				"subfolders": [],
+				"name": "Menu"
 			}
 		]
 	},

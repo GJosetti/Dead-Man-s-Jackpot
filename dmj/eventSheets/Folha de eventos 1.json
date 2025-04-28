@@ -92,6 +92,16 @@
 			"sid": 498837704262587
 		},
 		{
+			"eventType": "variable",
+			"name": "Menu",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 453639231284508
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -316,6 +326,15 @@
 					"id": "destroy",
 					"objectClass": "Slot_Reaper_death_part",
 					"sid": 717695175440007
+				},
+				{
+					"id": "request-fullscreen",
+					"objectClass": "Browser",
+					"sid": 334092902560333,
+					"parameters": {
+						"mode": "stretch-letterbox-scale",
+						"navigation-ui": "auto"
+					}
 				}
 			],
 			"sid": 575381494356524
@@ -2252,21 +2271,30 @@
 									}
 								},
 								{
+									"id": "set-animation",
+									"objectClass": "SlotReaper_anim",
+									"sid": 661942178479500,
+									"parameters": {
+										"animation": "\"Idle\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-speed",
+									"objectClass": "SlotReaper_col",
+									"sid": 764869410414838,
+									"behaviorType": "Projétil",
+									"parameters": {
+										"speed": "0"
+									}
+								},
+								{
 									"id": "wait",
 									"objectClass": "System",
 									"sid": 236040767604368,
 									"parameters": {
 										"seconds": "3.5",
 										"use-timescale": true
-									}
-								},
-								{
-									"id": "set-speed",
-									"objectClass": "SlotReaper_col",
-									"sid": 718727216950781,
-									"behaviorType": "Projétil",
-									"parameters": {
-										"speed": "0"
 									}
 								},
 								{
@@ -2486,31 +2514,70 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-click",
-					"objectClass": "Mouse",
-					"sid": 680875066774537,
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 846867937915537,
 					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked"
+						"first-value": "LayoutName",
+						"comparison": 0,
+						"second-value": "\"Menu\""
 					}
 				}
 			],
-			"actions": [
+			"actions": [],
+			"sid": 460639128322231,
+			"children": [
 				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 956108932421561,
-					"parameters": {
-						"audio-file": "MouseClick",
-						"loop": "not-looping",
-						"volume": "0",
-						"stereo-pan": "0",
-						"tag-optional": "\"\""
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 258439060207321,
+							"parameters": {
+								"key": 87
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "tween-one-property",
+							"objectClass": "Fade",
+							"sid": 425885904318051,
+							"behaviorType": "Interpolação",
+							"parameters": {
+								"tags": "\"FadeOut\"",
+								"property": "offsetOpacity",
+								"end-value": "100",
+								"time": "1",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 309494016773447,
+							"parameters": {
+								"seconds": "1.0",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "go-to-nextprevious-layout",
+							"objectClass": "System",
+							"sid": 604959224786377,
+							"parameters": {
+								"which": "next"
+							}
+						}
+					],
+					"sid": 767789637922295
 				}
-			],
-			"sid": 448828280227965,
-			"disabled": true
+			]
 		}
 	],
 	"sid": 558634085357818
