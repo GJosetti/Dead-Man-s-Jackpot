@@ -13,6 +13,7 @@
 		"Tiro_parry",
 		"Tiro",
 		"Camera",
-		"Player_Anim"
+		"Player_Anim",
+		"Tiro_Boss"
 	]
 }

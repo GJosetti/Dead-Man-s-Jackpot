@@ -91,6 +91,14 @@
 					}
 				},
 				{
+					"id": "set-text",
+					"objectClass": "EstadoInimigo",
+					"sid": 451655068502565,
+					"parameters": {
+						"text": "SlotReaper_anim.Estado"
+					}
+				},
+				{
 					"id": "set-animation",
 					"objectClass": "DeadEnergia",
 					"sid": 527757128696741,
@@ -105,6 +113,21 @@
 					"sid": 986159932382078,
 					"parameters": {
 						"frame-number": "TrainingDoll.Vida"
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "EstadoInimigo",
+					"sid": 646045996784875,
+					"behaviorType": "Fixar",
+					"parameters": {
+						"pin-to": "SlotReaper_anim",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
 					}
 				}
 			],
@@ -234,9 +257,73 @@
 						"height-type": "no",
 						"z": false
 					}
+				},
+				{
+					"id": "pin-to-object-imagepoint",
+					"objectClass": "SlotReaper_anim",
+					"sid": 264974447445426,
+					"behaviorType": "Fixar",
+					"parameters": {
+						"pin-to": "SlotReaper_col",
+						"image-point": "0",
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
 				}
 			],
 			"sid": 575381494356524
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Fade_col",
+					"sid": 939675841699956,
+					"parameters": {
+						"object": "Player"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-one-property",
+					"objectClass": "Fade",
+					"sid": 225104595795788,
+					"behaviorType": "Interpolação",
+					"parameters": {
+						"tags": "\"FadeOut\"",
+						"property": "offsetOpacity",
+						"end-value": "100",
+						"time": "1",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 870787526384393,
+					"parameters": {
+						"seconds": "1.0",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "go-to-nextprevious-layout",
+					"objectClass": "System",
+					"sid": 943383041922408,
+					"parameters": {
+						"which": "next"
+					}
+				}
+			],
+			"sid": 290743492565808
 		},
 		{
 			"eventType": "group",
@@ -894,6 +981,99 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 322355837202366,
+							"parameters": {
+								"variable": "IsParrying"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 577689087435465,
+							"parameters": {
+								"variable": "Power",
+								"comparison": 3,
+								"value": "0"
+							}
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "Player_Anim",
+							"sid": 200241217431426,
+							"parameters": {
+								"animation": "\"Shoot_End\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 747200333192867,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 737254671818270,
+									"parameters": {
+										"key": 65
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 155216591614872,
+									"parameters": {
+										"key": 68
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Player_Anim",
+									"sid": 231195057882539,
+									"parameters": {
+										"animation": "\"Run\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 242986699954461,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 367852116390470
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Player_Anim",
+									"sid": 680210580927187,
+									"parameters": {
+										"animation": "\"Idle\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 251728239168102
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "on-animation-finished",
 							"objectClass": "Player_Anim",
 							"sid": 433218401822567,
@@ -1055,6 +1235,14 @@
 							"parameters": {
 								"object": "Player"
 							}
+						},
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Tiro_Boss",
+							"sid": 149645595379834,
+							"parameters": {
+								"object": "Player"
+							}
 						}
 					],
 					"actions": [
@@ -1062,6 +1250,11 @@
 							"id": "destroy",
 							"objectClass": "Tiro_parry",
 							"sid": 572686631063824
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Tiro_Boss",
+							"sid": 695560699637077
 						}
 					],
 					"sid": 268689593703676,
@@ -1209,7 +1402,8 @@
 							],
 							"sid": 759308031533433
 						}
-					]
+					],
+					"isOrBlock": true
 				},
 				{
 					"eventType": "block",
@@ -1244,6 +1438,63 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "on-created",
+							"objectClass": "Tiro_Boss",
+							"sid": 521099733223396
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle-toward-position",
+							"objectClass": "Tiro_Boss",
+							"sid": 754668857675503,
+							"parameters": {
+								"x": "Player.X",
+								"y": "Player.Y"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Tiro_Boss",
+							"sid": 874894098105319,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 139422268862443,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-between-angles",
+									"objectClass": "Tiro_Boss",
+									"sid": 109871288331984,
+									"parameters": {
+										"first-angle": "90",
+										"second-angle": "180"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-flipped",
+									"objectClass": "Tiro_Boss",
+									"sid": 143365797775781,
+									"parameters": {
+										"state": "flipped"
+									}
+								}
+							],
+							"sid": 833273905405374
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "on-collision-with-another-object",
 							"objectClass": "Tiro_parry",
 							"sid": 173044889833864,
@@ -1260,6 +1511,27 @@
 						}
 					],
 					"sid": 620686745554593
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Tiro_Boss",
+							"sid": 901300947650685,
+							"parameters": {
+								"object": "Colisão"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Tiro_Boss",
+							"sid": 841528972295536
+						}
+					],
+					"sid": 588462135910400
 				}
 			],
 			"sid": 118421863499568
@@ -1413,58 +1685,266 @@
 			"title": "SlotReaper",
 			"description": "",
 			"isActiveOnStart": true,
-			"children": [],
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "SlotReaper_anim",
+							"sid": 300179399430579,
+							"parameters": {
+								"comparison": 2,
+								"x-co-ordinate": "Player.X"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "SlotReaper_anim",
+							"sid": 185108297272134,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 684617863815553
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 269606447530647
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "SlotReaper_anim",
+							"sid": 442221425501401,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 939768710715110,
+					"children": [
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "Machine State",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "SlotReaper_anim",
+											"sid": 417186108320751,
+											"parameters": {
+												"instance-variable": "Estado",
+												"comparison": 0,
+												"value": "\"Idle\""
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "SlotReaper_anim",
+											"sid": 525877877267437,
+											"parameters": {
+												"instance-variable": "isActing"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "SlotReaper_anim",
+											"sid": 198367071279091,
+											"parameters": {
+												"animation": "\"Idle\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "SlotReaper_anim",
+											"sid": 785617297647826,
+											"parameters": {
+												"instance-variable": "isActing",
+												"value": "true"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 856035194148069,
+											"parameters": {
+												"seconds": "2",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "SlotReaper_anim",
+											"sid": 323509761867855,
+											"parameters": {
+												"instance-variable": "Estado",
+												"value": "choose(\"Dash\",\"Laser\",\"Strike\")"
+											}
+										}
+									],
+									"sid": 574559538511044
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "SlotReaper_anim",
+											"sid": 872127736217863,
+											"parameters": {
+												"instance-variable": "Estado",
+												"comparison": 0,
+												"value": "\"Laser\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "SlotReaper_anim",
+											"sid": 688601149931583,
+											"parameters": {
+												"animation": "\"Laser\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 498126102391263,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "every-x-seconds",
+													"objectClass": "System",
+													"sid": 475074010688908,
+													"parameters": {
+														"interval-seconds": "0.5"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "spawn-another-object",
+													"objectClass": "SlotReaper_anim",
+													"sid": 810414014066158,
+													"parameters": {
+														"object": "Tiro_Boss",
+														"layer": "7",
+														"image-point": "1",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												}
+											],
+											"sid": 515251039359922
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "SlotReaper_anim",
+													"sid": 132860017966517,
+													"parameters": {
+														"instance-variable": "isActing"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "SlotReaper_anim",
+													"sid": 354606599628736,
+													"parameters": {
+														"instance-variable": "isActing",
+														"value": "false"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 251759752735405,
+													"parameters": {
+														"seconds": "2",
+														"use-timescale": true
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "SlotReaper_anim",
+													"sid": 216192762710372,
+													"parameters": {
+														"instance-variable": "Estado",
+														"value": "\"Idle\""
+													}
+												}
+											],
+											"sid": 161651918547897
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "SlotReaper_anim",
+											"sid": 314024416499697,
+											"parameters": {
+												"instance-variable": "Estado",
+												"comparison": 0,
+												"value": "\"Dash\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 807702815302251,
+											"parameters": {
+												"seconds": "2",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "SlotReaper_anim",
+											"sid": 372928900568684,
+											"parameters": {
+												"instance-variable": "Estado",
+												"value": "choose(\"Dash\",\"Laser\",\"Strike\")"
+											}
+										}
+									],
+									"sid": 465257880026528
+								}
+							],
+							"sid": 348656205307372
+						}
+					]
+				}
+			],
 			"sid": 873094785867251
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-collision-with-another-object",
-					"objectClass": "Fade_col",
-					"sid": 589789379219467,
-					"parameters": {
-						"object": "Player"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "tween-one-property",
-					"objectClass": "Fade",
-					"sid": 459823802627113,
-					"behaviorType": "Interpolação",
-					"parameters": {
-						"tags": "\"FadeOut\"",
-						"property": "offsetOpacity",
-						"end-value": "100",
-						"time": "1",
-						"ease": "default",
-						"destroy-on-complete": "no",
-						"loop": "no",
-						"ping-pong": "no",
-						"repeat-count": "1"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 195177468870737,
-					"parameters": {
-						"seconds": "1.0",
-						"use-timescale": true
-					}
-				},
-				{
-					"id": "go-to-nextprevious-layout",
-					"objectClass": "System",
-					"sid": 200096833291085,
-					"parameters": {
-						"which": "next"
-					}
-				}
-			],
-			"sid": 332861134028481
 		},
 		{
 			"functionName": "TakeDamage",

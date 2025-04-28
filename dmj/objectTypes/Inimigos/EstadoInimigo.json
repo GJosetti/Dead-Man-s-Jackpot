@@ -1,0 +1,16 @@
+{
+	"name": "EstadoInimigo",
+	"plugin-id": "Text",
+	"sid": 809615325691846,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Fixar",
+			"sid": 875156338464507
+		}
+	],
+	"effectTypes": []
+}

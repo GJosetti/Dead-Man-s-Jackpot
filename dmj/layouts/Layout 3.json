@@ -1659,10 +1659,10 @@
 					}
 				},
 				{
-					"type": "DeadBossJackPot",
+					"type": "SlotReaper_anim",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Default",
+						"initial-animation": "Idle",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -1671,9 +1671,16 @@
 					"sid": 230807007646186,
 					"tags": "",
 					"instanceVariables": {
-						"Estado": "\"Idle\""
+						"Estado": "Laser",
+						"isActing": true
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Fixar": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
 					"instanceFolderItem": {
 						"sid": 230807007646186,
 						"expanded": true,
@@ -1686,10 +1693,10 @@
 					"world": {
 						"x": 663.4009287156048,
 						"y": 163.6802686438526,
-						"width": 126.31369700619368,
-						"height": 126.31369700619368,
-						"originX": 0.5,
-						"originY": 0.5,
+						"width": 133,
+						"height": 117,
+						"originX": 0.45864661654135336,
+						"originY": 0.6153846153846154,
 						"color": [
 							1,
 							1,
@@ -1735,12 +1742,166 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 430.5437316894531,
-						"y": 22.9129695892334,
-						"width": 31.459844247782407,
+						"x": 467.26945870577185,
+						"y": 152.71941852622217,
+						"width": 28.249656059233182,
 						"height": 39.164295900300544,
-						"originX": 0.45918367346938777,
-						"originY": 0.6147540983606558,
+						"originX": 0.4772727272727273,
+						"originY": 0.5901639344262295,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "EstadoInimigo",
+					"properties": {
+						"text": "Estado",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 12,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 129,
+					"sid": 316873175844005,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Fixar": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 316873175844005,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 635.4733275142715,
+						"y": 73.08296166879153,
+						"width": 200,
+						"height": 30,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SlotReaper_col",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 130,
+					"sid": 878139677458706,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 878139677458706,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 663.4246059281094,
+						"y": 166.48469882184227,
+						"width": 108.10582398627608,
+						"height": 66.71695056442914,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Tiro_Boss",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 131,
+					"sid": 164321596596299,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Bullet": {
+							"properties": {
+								"speed": 400,
+								"acceleration": 0,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": true,
+								"step": false,
+								"enabled": true
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 164321596596299,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 410.24996486832805,
+						"y": 436.0491831541374,
+						"width": 52,
+						"height": 23,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -1918,7 +2079,7 @@
 						"x": 42.15170649018148,
 						"y": 17.83529898445545,
 						"width": 62.286511,
-						"height": 31.143256,
+						"height": 31.143255999999997,
 						"originX": 0.5,
 						"originY": 0.46511627906976744,
 						"color": [

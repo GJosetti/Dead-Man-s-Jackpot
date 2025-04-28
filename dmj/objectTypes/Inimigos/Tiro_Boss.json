@@ -1,0 +1,72 @@
+{
+	"name": "Tiro_Boss",
+	"plugin-id": "Sprite",
+	"sid": 117758620522556,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 794874945048070
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 52,
+						"height": 23,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1724913,
+						"collisionPoly": {
+							"points": [
+								0.7719298245614035,
+								0.2,
+								0.9473684210526316,
+								0.4666666666666667,
+								0.7719298245614035,
+								0.7555555555555555,
+								0.5087719298245614,
+								0.8888888888888888,
+								0.29824561403508776,
+								0.8888888888888888,
+								0.21052631578947367,
+								0.8666666666666667,
+								0,
+								0.5111111111111111,
+								0,
+								0.4666666666666667,
+								0.19298245614035092,
+								0.13333333333333333,
+								0.29824561403508776,
+								0.08888888888888889,
+								0.5087719298245614,
+								0.08888888888888889
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 342845522424975,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

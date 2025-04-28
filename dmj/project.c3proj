@@ -180,7 +180,10 @@
 					"TrainingDoll",
 					"Tiro_parry",
 					"DeadVidaInimigo",
-					"DeadBossJackPot"
+					"SlotReaper_anim",
+					"SlotReaper_col",
+					"EstadoInimigo",
+					"Tiro_Boss"
 				],
 				"subfolders": [],
 				"name": "Inimigos"
