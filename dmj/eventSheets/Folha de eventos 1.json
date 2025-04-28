@@ -1196,11 +1196,11 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 918629536196856,
+							"sid": 687512647591392,
 							"parameters": {
 								"audio-file": "PlayerDeath",
 								"loop": "not-looping",
-								"volume": "0",
+								"volume": "-10",
 								"stereo-pan": "0",
 								"tag-optional": "\"\""
 							}
@@ -1822,7 +1822,7 @@
 										{
 											"id": "set-boolean-instvar",
 											"objectClass": "SlotReaper_anim",
-											"sid": 641019666564096,
+											"sid": 481197172979956,
 											"parameters": {
 												"instance-variable": "isActing",
 												"value": "true"
@@ -1847,6 +1847,15 @@
 											}
 										},
 										{
+											"id": "set-instvar-value",
+											"objectClass": "SlotReaper_anim",
+											"sid": 274845666391123,
+											"parameters": {
+												"instance-variable": "choose",
+												"value": "choose(\"Dash\",\"Laser\")"
+											}
+										},
+										{
 											"id": "wait",
 											"objectClass": "System",
 											"sid": 403729329413849,
@@ -1858,16 +1867,16 @@
 										{
 											"id": "set-animation",
 											"objectClass": "SlotReaper_anim",
-											"sid": 707314525253691,
+											"sid": 817064049373846,
 											"parameters": {
-												"animation": "\"Escolha_\" & SlotReaper_anim.Estado",
+												"animation": "\"Escolha_\"&SlotReaper_anim.choose",
 												"from": "beginning"
 											}
 										},
 										{
 											"id": "wait",
 											"objectClass": "System",
-											"sid": 921117870020215,
+											"sid": 386359727361964,
 											"parameters": {
 												"seconds": "1",
 												"use-timescale": true
@@ -1876,10 +1885,10 @@
 										{
 											"id": "set-instvar-value",
 											"objectClass": "SlotReaper_anim",
-											"sid": 147280526452365,
+											"sid": 371695328626204,
 											"parameters": {
 												"instance-variable": "Estado",
-												"value": "choose(\"Dash\",\"Laser\")"
+												"value": "SlotReaper_anim.choose"
 											}
 										}
 									],
@@ -2118,6 +2127,15 @@
 											"parameters": {
 												"object": "Player"
 											}
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 794856289687220,
+											"parameters": {
+												"variable": "IsInvencible"
+											},
+											"isInverted": true
 										}
 									],
 									"actions": [

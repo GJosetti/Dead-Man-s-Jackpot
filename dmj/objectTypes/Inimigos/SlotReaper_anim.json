@@ -25,6 +25,20 @@
 			"desc": "",
 			"show": true,
 			"sid": 770117295018995
+		},
+		{
+			"name": "choose",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 221830978506411
+		},
+		{
+			"name": "Vida",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 128075655349234
 		}
 	],
 	"behaviorTypes": [

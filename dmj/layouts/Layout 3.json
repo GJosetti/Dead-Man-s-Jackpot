@@ -1673,7 +1673,9 @@
 					"instanceVariables": {
 						"Estado": "Idle",
 						"isActing": false,
-						"canStop": false
+						"canStop": false,
+						"choose": "\"\"",
+						"Vida": 12
 					},
 					"behaviors": {
 						"Fixar": {
