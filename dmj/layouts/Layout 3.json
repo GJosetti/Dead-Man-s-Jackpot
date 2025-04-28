@@ -1021,8 +1021,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 465.0710287144151,
-						"y": 157.0865038467389,
+						"x": 455.12385955346963,
+						"y": 170.4935579332306,
 						"width": 30.370497624269284,
 						"height": 37.808170511845425,
 						"originX": 0.45918367346938777,
@@ -1671,8 +1671,9 @@
 					"sid": 230807007646186,
 					"tags": "",
 					"instanceVariables": {
-						"Estado": "Laser",
-						"isActing": true
+						"Estado": "Idle",
+						"isActing": false,
+						"canStop": false
 					},
 					"behaviors": {
 						"Fixar": {
@@ -1691,12 +1692,12 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 663.4009287156048,
-						"y": 163.6802686438526,
-						"width": 133,
-						"height": 117,
-						"originX": 0.45864661654135336,
-						"originY": 0.6153846153846154,
+						"x": 633.2935684184096,
+						"y": 139.55168649286549,
+						"width": 114.87389772007731,
+						"height": 101.05448145300034,
+						"originX": 0.46511627906976744,
+						"originY": 0.5726495726495726,
 						"color": [
 							1,
 							1,
@@ -1742,8 +1743,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 467.26945870577185,
-						"y": 152.71941852622217,
+						"x": 491.48865318459553,
+						"y": 154.88184660468858,
 						"width": 28.249656059233182,
 						"height": 39.164295900300544,
 						"originX": 0.4772727272727273,
@@ -1804,8 +1805,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 635.4733275142715,
-						"y": 73.08296166879153,
+						"x": 635.9615812246358,
+						"y": 63.56201431668913,
 						"width": 200,
 						"height": 30,
 						"originX": 0,
@@ -1833,7 +1834,19 @@
 					"sid": 878139677458706,
 					"tags": "",
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Projétil": {
+							"properties": {
+								"speed": 0,
+								"acceleration": 0,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": false,
+								"step": false,
+								"enabled": true
+							}
+						}
+					},
 					"instanceFolderItem": {
 						"sid": 878139677458706,
 						"expanded": true,
@@ -1844,10 +1857,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 663.4246059281094,
-						"y": 166.48469882184227,
-						"width": 108.10582398627608,
-						"height": 66.71695056442914,
+						"x": 643.0628646501048,
+						"y": 159.2870955785207,
+						"width": 84.4447433216853,
+						"height": 59.17034832934469,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1900,6 +1913,86 @@
 						"y": 436.0491831541374,
 						"width": 52,
 						"height": 23,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Trigger_Dash",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 132,
+					"sid": 306124085602416,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 306124085602416,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 374.1673497999376,
+						"y": 125.09161103616074,
+						"width": 48.31449503854401,
+						"height": 261.04771670441136,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Trigger_Dash",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 133,
+					"sid": 921356594080236,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 921356594080236,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 719.3030407844675,
+						"y": 120.30165265979743,
+						"width": 48.31449503854401,
+						"height": 261.04771670441136,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

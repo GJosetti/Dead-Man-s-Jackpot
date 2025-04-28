@@ -1,17 +1,11 @@
 {
-	"name": "SlotReaper_col",
+	"name": "Trigger_Dash",
 	"plugin-id": "Sprite",
-	"sid": 270351125243096,
+	"sid": 674164675822749,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "Bullet",
-			"name": "Projétil",
-			"sid": 720754903240378
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -26,13 +20,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 4816146,
+						"imageSpriteId": 2207261,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 895210998571847,
+				"sid": 343071042074066,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

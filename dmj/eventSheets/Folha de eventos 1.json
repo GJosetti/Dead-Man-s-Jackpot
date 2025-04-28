@@ -147,15 +147,6 @@
 			],
 			"actions": [
 				{
-					"id": "set-position",
-					"objectClass": "Camera",
-					"sid": 215254803055091,
-					"parameters": {
-						"x": "lerp(Camera.X,Player.X,0.1)",
-						"y": "Camera.y"
-					}
-				},
-				{
 					"id": "set-height",
 					"objectClass": "Arma_teste",
 					"sid": 778338920429106,
@@ -188,7 +179,36 @@
 					}
 				}
 			],
-			"sid": 457286801344145
+			"sid": 457286801344145,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 880091465545167,
+							"parameters": {
+								"variable": "Vida",
+								"comparison": 4,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Camera",
+							"sid": 122900237667173,
+							"parameters": {
+								"x": "lerp(Camera.X,Player.X,0.1)",
+								"y": "Camera.y"
+							}
+						}
+					],
+					"sid": 293970097072495
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -953,6 +973,11 @@
 							"sid": 138581213322385
 						},
 						{
+							"id": "destroy",
+							"objectClass": "Player_Anim",
+							"sid": 599179385702757
+						},
+						{
 							"id": "wait",
 							"objectClass": "System",
 							"sid": 897943221715485,
@@ -1157,6 +1182,37 @@
 						}
 					],
 					"sid": 503095232967137
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-destroyed",
+							"objectClass": "Player_Anim",
+							"sid": 414887950469449
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 918629536196856,
+							"parameters": {
+								"audio-file": "PlayerDeath",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 876916720700251
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [],
+					"sid": 306577806125038
 				}
 			],
 			"sid": 529482182383508
@@ -1366,41 +1422,6 @@
 							],
 							"actions": [],
 							"sid": 548351909773191
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "trigger-once-while-true",
-									"objectClass": "System",
-									"sid": 689715598267428
-								},
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 108030354856130,
-									"parameters": {
-										"variable": "Vida",
-										"comparison": 3,
-										"value": "0"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "play",
-									"objectClass": "Audio",
-									"sid": 230953472699251,
-									"parameters": {
-										"audio-file": "PlayerDeath",
-										"loop": "not-looping",
-										"volume": "0",
-										"stereo-pan": "0",
-										"tag-optional": "\"\""
-									}
-								}
-							],
-							"sid": 759308031533433
 						}
 					],
 					"isOrBlock": true
@@ -1690,46 +1711,72 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "compare-x",
+							"id": "compare-instance-variable",
 							"objectClass": "SlotReaper_anim",
-							"sid": 300179399430579,
+							"sid": 328719985513794,
 							"parameters": {
-								"comparison": 2,
-								"x-co-ordinate": "Player.X"
-							}
+								"instance-variable": "Estado",
+								"comparison": 0,
+								"value": "\"Dash\""
+							},
+							"isInverted": true
 						}
 					],
-					"actions": [
+					"actions": [],
+					"sid": 684617863815553,
+					"children": [
 						{
-							"id": "set-mirrored",
-							"objectClass": "SlotReaper_anim",
-							"sid": 185108297272134,
-							"parameters": {
-								"state": "mirrored"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-x",
+									"objectClass": "SlotReaper_anim",
+									"sid": 419118902305017,
+									"parameters": {
+										"comparison": 2,
+										"x-co-ordinate": "Player.X"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-mirrored",
+									"objectClass": "SlotReaper_anim",
+									"sid": 650206581027218,
+									"parameters": {
+										"state": "mirrored"
+									}
+								}
+							],
+							"sid": 394308183064228
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 547806458893156
+								}
+							],
+							"actions": [
+								{
+									"id": "set-mirrored",
+									"objectClass": "SlotReaper_anim",
+									"sid": 545359026240791,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								}
+							],
+							"sid": 369637327001138
 						}
-					],
-					"sid": 684617863815553
+					]
 				},
 				{
 					"eventType": "block",
-					"conditions": [
-						{
-							"id": "else",
-							"objectClass": "System",
-							"sid": 269606447530647
-						}
-					],
-					"actions": [
-						{
-							"id": "set-mirrored",
-							"objectClass": "SlotReaper_anim",
-							"sid": 442221425501401,
-							"parameters": {
-								"state": "not-mirrored"
-							}
-						}
-					],
+					"conditions": [],
+					"actions": [],
 					"sid": 939768710715110,
 					"children": [
 						{
@@ -1764,39 +1811,75 @@
 									],
 									"actions": [
 										{
-											"id": "set-animation",
-											"objectClass": "SlotReaper_anim",
-											"sid": 198367071279091,
+											"id": "set-speed",
+											"objectClass": "SlotReaper_col",
+											"sid": 483754064010756,
+											"behaviorType": "Projétil",
 											"parameters": {
-												"animation": "\"Idle\"",
-												"from": "beginning"
+												"speed": "0"
 											}
 										},
 										{
 											"id": "set-boolean-instvar",
 											"objectClass": "SlotReaper_anim",
-											"sid": 785617297647826,
+											"sid": 641019666564096,
 											"parameters": {
 												"instance-variable": "isActing",
 												"value": "true"
 											}
 										},
 										{
+											"id": "set-boolean-instvar",
+											"objectClass": "SlotReaper_anim",
+											"sid": 283940090593866,
+											"parameters": {
+												"instance-variable": "canStop",
+												"value": "false"
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "SlotReaper_anim",
+											"sid": 398108520778442,
+											"parameters": {
+												"animation": "\"Roleta\"",
+												"from": "beginning"
+											}
+										},
+										{
 											"id": "wait",
 											"objectClass": "System",
-											"sid": 856035194148069,
+											"sid": 403729329413849,
 											"parameters": {
 												"seconds": "2",
 												"use-timescale": true
 											}
 										},
 										{
+											"id": "set-animation",
+											"objectClass": "SlotReaper_anim",
+											"sid": 707314525253691,
+											"parameters": {
+												"animation": "\"Escolha_\" & SlotReaper_anim.Estado",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 921117870020215,
+											"parameters": {
+												"seconds": "1",
+												"use-timescale": true
+											}
+										},
+										{
 											"id": "set-instvar-value",
 											"objectClass": "SlotReaper_anim",
-											"sid": 323509761867855,
+											"sid": 147280526452365,
 											"parameters": {
 												"instance-variable": "Estado",
-												"value": "choose(\"Dash\",\"Laser\",\"Strike\")"
+												"value": "choose(\"Dash\",\"Laser\")"
 											}
 										}
 									],
@@ -1918,25 +2001,132 @@
 									],
 									"actions": [
 										{
-											"id": "wait",
-											"objectClass": "System",
-											"sid": 807702815302251,
-											"parameters": {
-												"seconds": "2",
-												"use-timescale": true
-											}
-										},
-										{
-											"id": "set-instvar-value",
+											"id": "set-animation",
 											"objectClass": "SlotReaper_anim",
-											"sid": 372928900568684,
+											"sid": 317788396713282,
 											"parameters": {
-												"instance-variable": "Estado",
-												"value": "choose(\"Dash\",\"Laser\",\"Strike\")"
+												"animation": "\"Dash\"",
+												"from": "beginning"
 											}
 										}
 									],
-									"sid": 465257880026528
+									"sid": 465257880026528,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "SlotReaper_anim",
+													"sid": 719601260322261,
+													"parameters": {
+														"instance-variable": "isActing"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "SlotReaper_anim",
+													"sid": 421406094854420,
+													"parameters": {
+														"instance-variable": "isActing",
+														"value": "false"
+													}
+												},
+												{
+													"id": "set-speed",
+													"objectClass": "SlotReaper_col",
+													"sid": 471403803207108,
+													"behaviorType": "Projétil",
+													"parameters": {
+														"speed": "200"
+													}
+												},
+												{
+													"id": "set-angle-of-motion",
+													"objectClass": "SlotReaper_col",
+													"sid": 883851218330522,
+													"behaviorType": "Projétil",
+													"parameters": {
+														"angle": "angle(SlotReaper_anim.X,0,Player_Anim.X,0)"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 175377806699208,
+													"parameters": {
+														"seconds": "0.5",
+														"use-timescale": true
+													}
+												},
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "SlotReaper_anim",
+													"sid": 528547740688181,
+													"parameters": {
+														"instance-variable": "canStop",
+														"value": "true"
+													}
+												}
+											],
+											"sid": 290634272034161
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-collision-with-another-object",
+													"objectClass": "SlotReaper_col",
+													"sid": 866499754590547,
+													"parameters": {
+														"object": "Trigger_Dash"
+													}
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "SlotReaper_anim",
+													"sid": 977675216673143,
+													"parameters": {
+														"instance-variable": "canStop"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "SlotReaper_anim",
+													"sid": 825192753595955,
+													"parameters": {
+														"instance-variable": "Estado",
+														"value": "\"Idle\""
+													}
+												}
+											],
+											"sid": 820581725635765
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-collision-with-another-object",
+											"objectClass": "SlotReaper_col",
+											"sid": 324482684373965,
+											"parameters": {
+												"object": "Player"
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "TakeDamage",
+											"sid": 163042220644191
+										}
+									],
+									"sid": 892064116162139
 								}
 							],
 							"sid": 348656205307372
