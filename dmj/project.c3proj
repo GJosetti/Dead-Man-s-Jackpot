@@ -333,7 +333,24 @@
 			"subfolders": []
 		},
 		"music": {
-			"items": [],
+			"items": [
+				{
+					"name": "dmj1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 565422553774660,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "dmjboss.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 581572337330163,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"video": {

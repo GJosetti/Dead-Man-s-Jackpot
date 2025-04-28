@@ -85,7 +85,7 @@
 			"eventType": "variable",
 			"name": "Vida_inimigo",
 			"type": "number",
-			"initialValue": "12",
+			"initialValue": "10",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -2265,6 +2265,14 @@
 							],
 							"actions": [
 								{
+									"id": "stop",
+									"objectClass": "Audio",
+									"sid": 443064254458997,
+									"parameters": {
+										"tag": "\"bossmusic\""
+									}
+								},
+								{
 									"id": "set-boolean-eventvar",
 									"objectClass": "System",
 									"sid": 388206037991832,
@@ -2644,6 +2652,18 @@
 						"variable": "Energy",
 						"value": "0"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 790687011869843,
+					"parameters": {
+						"audio-file": "dmj1",
+						"loop": "looping",
+						"volume": "-20",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 719645604047092,
@@ -2853,6 +2873,46 @@
 				}
 			],
 			"sid": 202179936538785
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 273977410993256
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 793380657911193,
+					"parameters": {
+						"first-value": "LayoutName",
+						"comparison": 0,
+						"second-value": "\"Layout 3\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "stop-all",
+					"objectClass": "Audio",
+					"sid": 848067115847171
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 338177143152558,
+					"parameters": {
+						"audio-file": "dmjboss",
+						"loop": "looping",
+						"volume": "-20",
+						"stereo-pan": "0",
+						"tag-optional": "\"bossmusic\""
+					}
+				}
+			],
+			"sid": 616979870415860
 		}
 	],
 	"sid": 558634085357818
